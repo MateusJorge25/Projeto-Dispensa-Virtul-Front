@@ -1,0 +1,153 @@
+body {
+    background-image:url("../../img/CorFundo.jpeg");
+}
+
+.Container {
+    width: 100%;
+    margin: 0 auto;    
+}
+
+.Container-Login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    background: color #111;
+}
+
+.Imagem-usuario {
+    background-image: url("../../img/7.jpg");
+}
+
+.top {
+    position: absolute;
+    width: 245px;
+    height: 67px;
+    left: 464px;
+    top: 371px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+
+
+    position: absolute;
+    width: 524px;
+    height: 67px;
+    left: 458px;
+    top: 371px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.mid {
+    position: absolute;
+    width: 244px;
+    height: 63px;
+    left: 465px;
+    top: 478px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+
+
+    position: absolute;
+    width: 524px;
+    height: 68px;
+    left: 458px;
+    top: 473px;
+    
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.connected {
+    position: absolute;
+    width: 244px;
+    height: 39px;
+    left: 508px;
+    top: 565px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.66);
+
+
+    position: absolute;
+    width: 21px;
+    height: 23px;
+    left: 469px;
+    top: 571px;
+
+    background: rgba(0, 0, 0, 0.75); 
+} 
+
+.click {
+    position: absolute;
+    width: 209px;
+    height: 84px;
+    left: 614px;
+    top: 714px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+.forgot {
+    position: absolute;
+    width: 292px;
+    height: 68px;
+    left: 574px;
+    top: 800px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.66);
+
+}
+
+
