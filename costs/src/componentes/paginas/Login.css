@@ -15,40 +15,38 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 15px;
+    padding: 70px;
     background: color #111;
 }
 
-.Imagem-usuario {
+header {
     background-image: url("../../img/7.jpg");
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 659px;
+    top: 90px;
 }
 
-.top {
+.top { 
     position: absolute;
     width: 245px;
     height: 67px;
-    left: 464px;
-    top: 371px;
-
+    left: 590px;
+    top: 300px;
+    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     text-align: center;
 
+    position: center;
+    
     color: rgba(0, 0, 0, 0.5);
-
-
-    position: absolute;
-    width: 524px;
-    height: 67px;
-    left: 458px;
-    top: 371px;
-
-    background: #FFFFFF;
     border-radius: 10px;
 }
 
@@ -56,28 +54,20 @@ body {
     position: absolute;
     width: 244px;
     height: 63px;
-    left: 465px;
-    top: 478px;
+    left: 590px;
+    top: 350px;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     text-align: center;
 
+
     color: rgba(0, 0, 0, 0.5);
-
-
-    position: absolute;
-    width: 524px;
-    height: 68px;
-    left: 458px;
-    top: 473px;
-    
-    background: #FFFFFF;
     border-radius: 10px;
 }
 
@@ -85,47 +75,39 @@ body {
     position: absolute;
     width: 244px;
     height: 39px;
-    left: 508px;
-    top: 565px;
+    left: 590px;
+    top: 410px;
 
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 20;
     font-size: 30px;
     line-height: 36px;
     display: flex;
     align-items: center;
     text-align: center;
 
-    color: rgba(0, 0, 0, 0.66);
-
-
-    position: absolute;
-    width: 21px;
-    height: 23px;
-    left: 469px;
-    top: 571px;
-
-    background: rgba(0, 0, 0, 0.75); 
+    color: rgba(0, 0, 0, 0.75);
 } 
 
 .click {
-    position: absolute;
-    width: 209px;
+    position:absolute;
+    width: 200px;
     height: 84px;
-    left: 614px;
-    top: 714px;
+    left: 610px;
+    top: 480px;
 
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 40;
     font-size: 36px;
     line-height: 44px;
-    display: flex;
+    display: center;
     align-items: center;
     text-align: center;
 
     color: #000000;
+    border-radius: 10px;
 
 }
 
@@ -135,14 +117,14 @@ body {
     width: 292px;
     height: 68px;
     left: 574px;
-    top: 800px;
+    top: 600px;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
-    display: flex;
+    display: center;
     align-items: center;
     text-align: center;
 

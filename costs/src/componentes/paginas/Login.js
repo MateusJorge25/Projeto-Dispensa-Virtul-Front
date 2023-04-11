@@ -25,9 +25,9 @@ function Login() {
     <div className='Container-Login'>
     <form onSubmit={handleSumit}>
         
-    <div >
+    <header>
         <img src="../../img/7.jpg" alt='Imagem usuario'/>
-    </div>
+    </header>
 
         <div className='top'>
             <input type='email' id='email' name='email' placeholder='Insira seu email' />
@@ -45,7 +45,7 @@ function Login() {
            </label>
         </div>
 
-            <button className='click' type='submit'>Entrar</button>
+            <button className='click' type='submit'>Entrar</button>  
 
         <div className='forgot'>
            <a href='/esqueceu-a-senha' target='_black'> Esqueceu a senha?</a>
