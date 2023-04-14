@@ -4,7 +4,7 @@ import Container from '../layout/Container';
 
 import './Login.css'
 
-// import img from'../../img/7';
+import img from'../../img/7.jpg';
 
 import { useState } from 'react'
 
@@ -22,12 +22,11 @@ function Login() {
 
     return (
 <div className='Container'>
-    <div className='Container-Login'>
     <form onSubmit={handleSumit}>
         
-    <header>
-        <img src="../../img/7.jpg" alt='Imagem usuario'/>
-    </header>
+    <div className='containerImg'>
+        <img className='img' src= {img} alt='Imagem usuario' width={100}/>
+    </div>
 
         <div className='top'>
             <input type='email' id='email' name='email' placeholder='Insira seu email' />
@@ -38,22 +37,23 @@ function Login() {
         </div>
 
         <div className='connected'>
-            <label htmlFor='FiqueConectado'>
+            <label classeName="labelFiqueConectad" htmlFor='FiqueConectado'>
             <input type='checkbox' id='FiqueConectado' name='Fique Conectado' checked={FiqueConectado} onChange={(e) => setFiqueConectado(e.target.checked)} 
             /> 
             Fique Conectado
            </label>
         </div>
 
+        <div className='conteinerBtn'>
             <button className='click' type='submit'>Entrar</button>  
+        </div>
 
         <div className='forgot'>
-           <a href='/esqueceu-a-senha' target='_black'> Esqueceu a senha?</a>
+           <a className='linkForgot' href='/esqueceu-a-senha' target='_black'> Esqueceu a senha?</a>
         </div>
 
 
     </form>
-    </div>
 </div>
     );
 }

@@ -14,7 +14,7 @@ function App() {
       <Container customClass='minHeight'>
         <Routes>
           <Route exact path='/Cadastramento' element={<Cadastramento />} />
-          <Route exact path='/Login' element={<Login />} />
+          <Route exact path='/' element={<Login />} />
           <Route exact path='/EsqSenha' element={<EsqSenha />} />
           <Route exact path='/Alterar_sen_email' element={<Alterar_sen_email />} />
           <Route exact path='/TelaInicio' element={<TelaInicio />} />

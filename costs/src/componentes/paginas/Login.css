@@ -1,135 +1,95 @@
 body {
     background-image:url("../../img/CorFundo.jpeg");
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Container {
-    width: 100%;
-    margin: 0 auto;    
-}
-
-.Container-Login {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-
-    padding: 70px;
-    background: color #111;
+    align-items: center;
+    width: 30rem;
+    height: 39rem;
+    margin: 3rem;
+    background-color: rgba(255, 255, 255, 0.4);   
 }
 
-header {
-    background-image: url("../../img/7.jpg");
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 659px;
-    top: 90px;
+.img{
+    margin: 2rem;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .top { 
-    position: absolute;
-    width: 245px;
-    height: 67px;
-    left: 590px;
-    top: 300px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-
-    position: center;
-    
+    display: flex;
+    justify-content: center;
+    width: 55rem;
+    height: 2rem;
     color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    
 }
 
 .mid {
-    position: absolute;
-    width: 244px;
-    height: 63px;
-    left: 590px;
-    top: 350px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-
-
-    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    width: 55rem;
+    height: 2rem;
+    margin: 2rem 0 0 0;
+    color: rgba(0, 0, 0, 0.5);;
     border-radius: 10px;
+
 }
 
 .connected {
-    position: absolute;
-    width: 244px;
-    height: 39px;
-    left: 590px;
-    top: 410px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 20;
-    font-size: 30px;
-    line-height: 36px;
+    width: 55rem;
+    height: 5rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-
-    color: rgba(0, 0, 0, 0.75);
+    
 } 
+.labelFiqueConectad{
+    font: 2rem;
+}
 
 .click {
-    position:absolute;
-    width: 200px;
-    height: 84px;
-    left: 610px;
-    top: 480px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 40;
-    font-size: 36px;
-    line-height: 44px;
-    display: center;
+    display: flex;
+    width: 7rem;
+    height: 3rem;
     align-items: center;
+    justify-content: center;
     text-align: center;
-
-    color: #000000;
+    background: rgba(70, 236, 156, 0.8);
+    border: 2px solid rgba(70, 236, 156, 0.8);
     border-radius: 10px;
+    font-size: 1.4rem;
+}
 
+.conteinerBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .forgot {
-    position: absolute;
-    width: 292px;
-    height: 68px;
-    left: 574px;
-    top: 600px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    display: center;
-    align-items: center;
-    text-align: center;
-
-    color: rgba(0, 0, 0, 0.66);
-
+    width: 55rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
 }
-
+.linkForgot{
+    color: rgba(0, 0, 0, 0.66);
+    text-decoration: none;
+    font-size: 1.7rem;
+}
 
