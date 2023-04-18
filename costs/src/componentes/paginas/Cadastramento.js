@@ -1,5 +1,15 @@
+import React from "react"
+
+
+
+
+
+
+
+
+
 function Cadastramento() {
-    return <h1>Java</h1>
+
 }
 
 export default Cadastramento
