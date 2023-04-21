@@ -1,8 +1,10 @@
-import './Cadastro.css';
+import '../paginas/Cadastro.css';
 import img from '../../img/7-removebg-preview.png';
-const cadastro = () =>{
+import Container from '../layout/Container';
+function cadastro (){
 
 return (
+    <Container>
     <div className='Container'>
         <form> 
         <div className='imgContainer'>
@@ -11,10 +13,10 @@ return (
 
         <div className='Seletores'>
             <a className= "entrar" href='/'>Entrar</a>
-            <a className= "cadastrar" href='/cadastro'>Cadastro</a>
+            <a className= "cadastrar  select" href='/cadastro'>Cadastro</a>
         </div>
 
-        <div className='ContainerImpFirst'>
+        <div className='ContainerImp'>
             <input className="Ipt"type='email' name='email' required placeholder='Insira seu email'></input>
         </div>
         <div className='ContainerImp'>
@@ -25,15 +27,13 @@ return (
         </div>
         <div className='ContainerImp'>
             <input className="Ipt" type='password' name='senhaConfirm' required placeholder='Confirme sua senha'></input>
-        </div>
-        <div className='ContainerImp'>
-            <input className="Ipt" type='string' name='telefone' required placeholder='Insira seu telefone'></input>
         </div>        
         <div className='ContainerBtn'>
             <button className="btn" type='submit'>Cadastrar</button>
         </div>
         </form>
     </div>
+    </Container>
 )
 }
 

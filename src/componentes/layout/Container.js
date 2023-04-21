@@ -1,10 +1,8 @@
-import Login from '../paginas/Login'
-import styles from './Container.css'
-
+import style from "./Container.module.css"
 
 function Container(props) {
     return(
-        <div className={'${sytles.container} ${styles[props.customClass]}'}>{props.children}</div>
+        <div className={`${style.container} ${style[props.customClass, props.containerMod]}`}>{props.children}</div>
     )
 }
 

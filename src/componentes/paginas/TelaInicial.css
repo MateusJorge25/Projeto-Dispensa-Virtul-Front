@@ -1,0 +1,27 @@
+.cards{
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 2rem;   
+    padding: 1rem;
+}
+.titleCard{
+ font-size: 1.5rem;
+}
+.BtnCardSeta{
+    position: absolute;
+    margin: 0 0 5rem 15rem;
+}
+.PrimeiraLinha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SegundaLinha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
