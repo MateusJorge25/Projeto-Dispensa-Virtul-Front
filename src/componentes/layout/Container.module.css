@@ -10,9 +10,16 @@
 
 .colorTelaPrincipal{
     padding: 5rem 0 0 0;
-    background-color: aliceblue;
+    background-color: #fff;
     height: 35rem;    
     justify-content: space-around;
+    align-items: center;
+}
+.telaAdicionar{
+    padding: 0 0 0 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
