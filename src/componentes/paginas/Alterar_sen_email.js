@@ -34,13 +34,13 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerBTN">
-            <button className='button' type='submit'>Entrar</button>
+            <button className='button' type='submit'>Enviar</button>
         </div>
 
         <div className="conteinerDivisoria">
-            <img src={imgSeparacao} width={100} ></img>
+            <img className="linhas" src={imgSeparacao} width={75} height={2} ></img>
             <p>Ou</p>
-            <img src={imgSeparacao} width={100} ></img>
+            <img className="linhas" src={imgSeparacao} width={75} height={2}></img>
         </div>
 
         <div className="conteinerLink">

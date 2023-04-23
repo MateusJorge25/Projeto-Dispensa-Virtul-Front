@@ -1,12 +1,3 @@
-body {
-    background-image:url("../../img/CorFundo.jpeg");
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .Conteiner {
     width: 30rem;
     height: 35rem;
@@ -21,9 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
 
 .FormEsqueceuSenha{
     margin: 2rem auto;
@@ -34,12 +23,17 @@ body {
     font-size: 1rem;
     margin:  1rem 3rem;
 }
+.conteinerTitle > h1{
+    font-size: 1.5rem;
+    color: #282828;
+}
 
 .conteinerP {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .conteinerP1 {
@@ -47,24 +41,35 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.75);
 }   
 
 .conteinerBox {
     display: flex;
     justify-content: center;
     text-align: center;
-
+    margin: 1.5rem;
 }
 
 .conteinerBTN {
     display: flex;
+    margin-bottom: 1.5rem;
 }
 
 .conteinerDivisoria {
     display: flex;
     justify-content: center;
-    
+    align-items: center;
     border: rgba(0, 0, 0, 0.46);
+}
+.conteinerDivisoria > p {
+    margin: 0 1rem;
+}
+
+.inptEmailPassword{
+ border: 2px solid #ffffff;
+ width: 15rem;
+ height: 2.5rem;
 }
 
 .conteinerLink {
@@ -73,4 +78,5 @@ body {
     color: rgba(0, 0, 0, 0.66);
     text-decoration: none;
     justify-content: center;
+    margin:  0.5rem 0;
 }
