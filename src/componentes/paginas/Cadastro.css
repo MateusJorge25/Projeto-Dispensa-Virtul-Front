@@ -1,10 +1,3 @@
-body{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .Container{
     width: 30rem;
     height: 35rem;
@@ -13,6 +6,9 @@ body{
     align-items: center;
     margin: 5rem auto;
     background-color:rgba(255,255,255,0.4); 
+}
+.select{
+    border-bottom: 0.12rem solid black;
 }
 .Seletores {
     width: 10rem;
@@ -38,15 +34,10 @@ body{
     justify-content: center;
     justify-items: center;
     margin: 0 auto;
+    
 }
 
-.ContainerImpFirst{
-    display: flex;
-    width: 245px;
-    height: 50px;
-    margin: 1rem 0 0 0 ;
-    align-items: center;
-}
+
 .ContainerImp{
     display: flex;
     justify-content: center;
@@ -64,6 +55,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
 }
 .btn{
     width: 6rem;
