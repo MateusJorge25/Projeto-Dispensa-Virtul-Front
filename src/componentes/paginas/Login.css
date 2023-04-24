@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10% auto 50% ;
+    margin: 5rem auto;
     background-color:rgba(255,255,255,0.4); 
 }
 .select{
@@ -45,7 +45,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-    padding: 5rem;
 }
 
 .top { 

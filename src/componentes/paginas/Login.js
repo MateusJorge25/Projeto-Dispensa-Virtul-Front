@@ -41,7 +41,7 @@ function Login () {
                     <button className='button' type='submit'>Entrar</button>  
                 </div>
                 <div className='forgot'>
-                <a className='forgotlink' href='/esqueceu-a-senha' target='_black'> Esqueceu a senha?</a>
+                <a className='forgotlink' href='/alterarSenha' target='_black'> Esqueceu a senha?</a>
                 </div>
             </form>
         </div>
