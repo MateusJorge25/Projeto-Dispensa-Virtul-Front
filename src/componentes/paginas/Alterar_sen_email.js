@@ -2,6 +2,7 @@ import React from "react";
 import imgCadeado from "../../img/Imagem de cadeado.png"
 import './Alterar_sen_email.css';
 import imgSeparacao from "../../img/Separação.png"
+import { Link } from "react-router-dom";
 
 function Alterar_sen() {
     
@@ -44,7 +45,7 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerLink">
-            <a className='conteinerLink' href='Cadastro.js' target='_black'> Criar nova conta</a>
+            <Link className='conteinerLink' to='Cadastro.js' target='_black'> Criar nova conta</Link>
         </div>
 
         </form>
