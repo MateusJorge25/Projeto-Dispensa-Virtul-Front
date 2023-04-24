@@ -2,6 +2,7 @@ import React from "react";
 import imgCadeado from "../../img/Imagem de cadeado.png"
 import './Alterar_sen_email.css';
 import imgSeparacao from "../../img/Separação.png"
+import Container from "../layout/Container";
 
 function Alterar_sen() {
     
@@ -11,6 +12,7 @@ function Alterar_sen() {
     
     return (
         <div className="Conteiner">
+        <Container>
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
 
         <div className='conteinerImg'>
@@ -48,6 +50,7 @@ function Alterar_sen() {
         </div>
 
         </form>
+        </Container>
         </div>
     );
 }
