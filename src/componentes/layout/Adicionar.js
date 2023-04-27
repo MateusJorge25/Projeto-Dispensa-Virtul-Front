@@ -22,7 +22,7 @@ const adicionar = ({tela, placeholder}) =>{
                 </div>
             </Container>
         </div>
-    )
+    )   
 }
 
 export default adicionar;

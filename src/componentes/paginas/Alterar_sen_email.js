@@ -11,8 +11,9 @@ function Alterar_sen() {
     }
     
     return (
-        <div className="Conteiner">
+        
         <Container>
+        <div className="Conteiner">
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
 
         <div className='conteinerImg'>
@@ -50,8 +51,9 @@ function Alterar_sen() {
         </div>
 
         </form>
-        </Container>
         </div>
+        </Container>
+       
     );
 }
 
