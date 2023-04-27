@@ -2,35 +2,39 @@ import './Login.css';
 import img from '../../img/7-removebg-preview.png';
 import Container from "../../componentes/layout/Container"
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Login () {
-    const [email, setemail] = useState('');
-    const [senha, setsenha] = useState('');
-    const [FiqueConectado, setFiqueConectado] = useState('');
+    const [formData, setFormData] = useState ({
+        email:'',
+        senha:'',
+    });
+    const [FiqueConectado, setFiqueConectado] = useState("");
 
     const handleSumit = (event) => {
         event.preventDefault();
     }
+
 
     return (
     <Container customClass='.min-height'>
         <div className='Container'>
             <form onSubmit={handleSumit}>  
             <div className='containerImg'>
-                <img  src={img} width={100}/>
+                <img src={img} width={100}/>
             </div>  
 
             <div className='Seletores'>
-                <a className= "entrar select" href='/'>Entrar</a>
-                <a className= "cadastrar" href='/cadastro'>Cadastro</a>
+                <Link className= "entrar select" to='/'>Entrar</Link>
+                <Link className= "cadastrar" to='/cadastro'>Cadastro</Link>
             </div>
 
                 <div className='top'>
-                    <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' />
+                    <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required />
                 </div>
 
                 <div className='mid'>
-                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Inserir sua senha' />
+                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Inserir sua senha' required />
                 </div>
 
                 <div className='connected'>
@@ -41,7 +45,7 @@ function Login () {
                     <button className='button' type='submit'>Entrar</button>  
                 </div>
                 <div className='forgot'>
-                <a className='forgotlink' href='/alterarSenha' target='_black'> Esqueceu a senha?</a>
+                <Link className='forgotlink' to='/alterarSenha' target='_black'> Esqueceu a senha?</Link>
                 </div>
             </form>
         </div>

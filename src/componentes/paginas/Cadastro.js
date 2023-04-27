@@ -1,6 +1,7 @@
 import '../paginas/Cadastro.css';
 import img from '../../img/7-removebg-preview.png';
 import Container from '../layout/Container';
+import { Link } from 'react-router-dom';
 function cadastro (){
 
 return (
@@ -12,8 +13,8 @@ return (
         </div>
 
         <div className='Seletores'>
-            <a className= "entrar" href='/'>Entrar</a>
-            <a className= "cadastrar  select" href='/cadastro'>Cadastro</a>
+            <Link className= "entrar" to='/'>Entrar</Link>
+            <Link className= "cadastrar  select" to='/cadastro'>Cadastro</Link>
         </div>
 
         <div className='ContainerImp'>
