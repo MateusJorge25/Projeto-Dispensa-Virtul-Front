@@ -7,7 +7,7 @@ const AdicionarDespensa = () =>{
     return (
         <div className="ContainerAdicionarCategoria">
                 <Navbar />
-                <Adicionar placeholder="Adicionar Despensa" tela="Despensa"/>
+                <Adicionar placeholder="Adicionar Despensa" tela="Cadastrar Despensa" textButton="Adicionar"/>
         </div>
     )
 }
