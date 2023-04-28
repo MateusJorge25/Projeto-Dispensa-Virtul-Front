@@ -2,6 +2,10 @@ import React from "react";
 import imgCadeado from "../../img/Imagem de cadeado.png"
 import './Alterar_sen_email.css';
 import imgSeparacao from "../../img/Separação.png"
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad2ffb8ea6184c2a0d744b0e8f5b479d18b091c0
 import { Link } from "react-router-dom";
 import Container from "../layout/Container";
 
@@ -13,6 +17,10 @@ function Alterar_sen() {
     }
     
     return (
+<<<<<<< HEAD
+=======
+        
+>>>>>>> ad2ffb8ea6184c2a0d744b0e8f5b479d18b091c0
         <Container>
         <div className="Conteiner">
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
@@ -48,12 +56,22 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerLink">
+<<<<<<< HEAD
             <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
+=======
+            <Link className='conteinerLink' to='Cadastro.js' target='_black'> Criar nova conta</Link>
+            <a className='conteinerLink' href='/cadastro' target='_black'> Criar nova conta</a>
+
+>>>>>>> ad2ffb8ea6184c2a0d744b0e8f5b479d18b091c0
         </div>
 
         </form>
         </div>
         </Container>
+<<<<<<< HEAD
+=======
+       
+>>>>>>> ad2ffb8ea6184c2a0d744b0e8f5b479d18b091c0
     );
 }
 
