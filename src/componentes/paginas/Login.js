@@ -5,11 +5,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 function Login () {
-    const [formData, setFormData] = useState ({
-        email:'',
-        senha:'',
-    });
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
     const [FiqueConectado, setFiqueConectado] = useState("");
+
+    const handleEmail = (event) => {
+        setEmail(event.target.value);
+    };
+    const handlePassword = (event) => {
+        setPassword(event.target.value);
+    };
 
     const handleSumit = (event) => {
         event.preventDefault();
@@ -30,11 +35,11 @@ function Login () {
             </div>
 
                 <div className='top'>
-                    <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required />
+                    <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required value={email} onChange={(e) => {handleEmail(e)}}/>
                 </div>
 
                 <div className='mid'>
-                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Inserir sua senha' required />
+                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Inserir sua senha' required value={password} onChange={(e) => {handlePassword(e)}}/>
                 </div>
 
                 <div className='connected'>
