@@ -2,7 +2,7 @@ import Navbar from "../layout/NavBar";
 import Adicionar from "../layout/Adicionar";
 import "../paginas/AdicionarCategoria.css";
 
-const EditarCategoria = ({props}) => {
+const EditarCategoria = () => {
 
     return (
         <div className="ContainerEditarCategoria">

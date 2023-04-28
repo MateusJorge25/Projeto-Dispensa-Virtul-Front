@@ -7,15 +7,17 @@ import Container from './componentes/layout/Container';
 import AdicionarDespensa from "./componentes/paginas/AdicionarDespensa";
 import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria";
 import EditarCategoria from "./componentes/paginas/EditarCategoria";
-import EditarDispensa from "./componentes/paginas/EditarDispensa";
-
+import EditarDespensa from "./componentes/paginas/EditarDespensa";
+import AdicionarProduto  from "./componentes/paginas/AdicionarProduto";
+ 
 function App() {
   return (
     <BrowserRouter>
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Login />} />
-          <Route exact path='/dispensa/editar' element={<EditarDispensa/>}/>
+          <Route exact path='/produto/adicionar'element={<AdicionarProduto/>}/>
+          <Route exact path='/despensa/editar' element={<EditarDespensa/>}/>
           <Route exact path='/categoria/editar' element={<EditarCategoria/>} />
           <Route exact path='/categoria/adicionar' element={<AdicionarCategoria/>} />
           <Route exact path='/despensa/adicionar' element={<AdicionarDespensa/>} />
