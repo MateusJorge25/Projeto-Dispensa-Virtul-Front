@@ -3,7 +3,7 @@ import icon from '../../img/Logo.png';
 import Lupa from '../../img/Imagem Lupa.png';
 
 
-const navbar = () => {
+const navbar = ({}) => {
 
     return(
         <div className='container-navbar'>
@@ -13,7 +13,7 @@ const navbar = () => {
                     <h1>Despensa</h1>
                     <div className='containerInputBarraDePesquisa'>
                         <input type="text" name='barraDePesquisa' className="barraDePesquisa" placeholder='Buscar Item'/> 
-                        <span className='ContainerIconLupa'><img src={Lupa} width={30}/></span>
+                        <span className='ContainerIconLupa'><img src={Lupa} width={30}/></span>    
                     </div>   
                 </div> 
             </nav>

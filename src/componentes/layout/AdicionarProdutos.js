@@ -9,14 +9,21 @@ import balança from "../../img/balança.png";
 import calendario from "../../img/calendario.png";
 import despesas from "../../img/despesas.png";
 import bebidas from "../../img/bebidas.png";
+import hamburguer from "../../img/Hamburger_icon 2.png"
 
 const AdicionarProdutos = ({tela, textButton}) =>{
 
     return(
+
         <div className="adicionar" >
+        
+        <div className={hamburguer}>
+            <span className='ContainerHamburguer'><img src={hamburguer} width={30}/></span>
+        </div>
+
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
-                    <Link to={`/home`}><img src={btnVoltar} width={45}/></Link>
+                    <Link to={`/home`}><img src={btnVoltar} width={45}/></Link>    
                     <h1>{tela}</h1>
                 </div>
                 
@@ -25,43 +32,42 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                <span className="imgCampos"><img src={caixa} width={30}></img></span>   
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Lote"/>
-                    
+                    <span className="imgCampos"><img src={caixa} width={30}></img></span>   
                 </div>
                 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Quantidade" disabled/>
+                    <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
                     <span className="imgCampos"><img src={setaCima} width={30}></img></span>
+                    {/*<button className="menos">-</button><input type="text" className="contador"/> <button className="mais">+</button>*/}
+                
                 </div>
 
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Marca"/>
-                    <span className="imgMarca"><img src={armario} width={30}></img></span>
+                    <span className="imgCampos"><img src={armario} width={30}></img></span>
                 </div>
 
                 <div className="ContainerInputAdiconar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Unidade(s)"/>
-                    <span className="imgUnidade"><img src={balança} width={30}></img></span>
+                    <span className="imgCampos"><img src={balança} width={30}></img></span>
                 </div>
 
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Data Validade"/>
-                    <span className="imgValidade"><img src={calendario} width={30}></img></span>
+                    <span className="imgCampos"><img src={calendario} width={30}></img></span>
                 </div>
 
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Despensa"/>
-                    <span className="imgDespesa"><img src={despesas} width={30}></img></span>
+                    <span className="imgCampos"><img src={despesas} width={30}></img></span>
                 </div>
 
 
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Bebidas" />
-                    <span className="imgBebida"><img src={bebidas} width={30}></img></span> 
+                    <span className="imgCampos"><img src={bebidas} width={30}></img></span> 
                 </div> 
-
-
 
                 
                 <div className="BtnsAdicionar">
