@@ -6,7 +6,7 @@ const AdicionarProduto = () => {
 
     return (
 
-        <div>
+        <div> 
         <Container>
             <Navbar />
             <AdiconarProdutos tela="Adicionar Produto" textButton="Adicionar"/>
