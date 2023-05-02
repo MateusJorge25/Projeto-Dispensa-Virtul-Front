@@ -9,6 +9,7 @@ import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria";
 import EditarCategoria from "./componentes/paginas/EditarCategoria";
 import EditarDespensa from "./componentes/paginas/EditarDespensa";
 import AdicionarProduto  from "./componentes/paginas/AdicionarProduto";
+import TotalProdutos from "./componentes/paginas/TotalProdutos";
  
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/cadastro' element={<Cadastro />} />
           <Route exact path='/alterarSenha' element={<AlterarSenhaEmail />} />
           <Route exact path='/home' element={<TelaInicio />} />
+          <Route exact path='/produtos' element={<TotalProdutos/>}/>
         </Routes>
       </Container>
     </BrowserRouter>

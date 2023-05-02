@@ -16,7 +16,7 @@ function Menu (){
     return(
         <div className="container-menu">
             <Navbar />
-            <Container customClass='.min-height' containerMod='colorTelaPrincipal'> 
+            <Container containerMod='colorTelaPrincipal'> 
               <div className="PrimeiraLinha">
                     <div className="cards">
                         <div className="titleImgCard">
