@@ -13,6 +13,11 @@ function Alterar_sen() {
     }
     
     return (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f56dd81b663274154f7dd2e473768d0c811e8663
         <Container>
         <div className="Conteiner">
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
@@ -48,12 +53,35 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerLink">
+<<<<<<< HEAD
             <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
+=======
+
+
+            <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
+
+            <Link className='conteinerLink' to='Cadastro.js' target='_black'> Criar nova conta</Link>
+          
+
+
+
+        <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
+
+            <Link className='conteinerLink' to='Cadastro.js' target='_black'> Criar nova conta</Link>
+
+
+
+>>>>>>> f56dd81b663274154f7dd2e473768d0c811e8663
         </div>
 
         </form>
         </div>
         </Container>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f56dd81b663274154f7dd2e473768d0c811e8663
     );
 }
 
