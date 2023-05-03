@@ -1,9 +1,10 @@
 import '../layout/NavBar.css';
 import icon from '../../img/Logo.png';
 import Lupa from '../../img/Imagem Lupa.png';
+import hamburguer from "../../img/Hamburger_icon 2.png"
 
 
-const navbar = ({}) => {
+const navbar = () => {
 
     return(
         <div className='container-navbar'>
@@ -14,8 +15,12 @@ const navbar = ({}) => {
                     <div className='containerInputBarraDePesquisa'>
                         <input type="text" name='barraDePesquisa' className="barraDePesquisa" placeholder='Buscar Item'/> 
                         <span className='ContainerIconLupa'><img src={Lupa} width={30}/></span>    
+                        <div className="hamburguer">
+                            <span className='ContainerHamburguer'><img src={hamburguer} width={30}/></span>
+                        </div> 
                     </div>   
-                </div> 
+                </div>
+               
             </nav>
         </div>
     )

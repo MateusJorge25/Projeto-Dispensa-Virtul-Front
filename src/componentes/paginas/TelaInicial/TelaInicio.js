@@ -1,13 +1,13 @@
-import Navbar from "../layout/NavBar.js";
-import Container from "../layout/Container.js";
+import Navbar from "../../layout/NavBar.js";
+import Container from "../../layout/Container.js";
 import './TelaInicial.css';
-import iconDespensa from "../../img/iconDespensa.png";
-import iconTodosOsProdutos from "../../img/iconTodosOsProdutos.png";
-import iconListaDeCompras from "../../img/iconListaDeCompras.png";
-import iconCategorias from "../../img/iconCategorias.png";
-import iconItensAVencer from "../../img/iconItensAVencer.png";
-import iconItensVencidos from "../../img/iconItensVencidos.png";
-import iconSetaCards from "../../img/Seta cards.png";
+import iconDespensa from "../../../img/iconDespensa.png";
+import iconTodosOsProdutos from "../../../img/iconTodosOsProdutos.png";
+import iconListaDeCompras from "../../../img/iconListaDeCompras.png";
+import iconCategorias from "../../../img/iconCategorias.png";
+import iconItensAVencer from "../../../img/iconItensAVencer.png";
+import iconItensVencidos from "../../../img/iconItensVencidos.png";
+import iconSetaCards from "../../../img/Seta cards.png";
 import { Link } from "react-router-dom";
 
 function Menu (){
@@ -16,7 +16,7 @@ function Menu (){
     return(
         <div className="container-menu">
             <Navbar />
-            <Container customClass='.min-height' containerMod='colorTelaPrincipal'> 
+            <Container containerMod='colorTelaPrincipal'> 
               <div className="PrimeiraLinha">
                     <div className="cards">
                         <div className="titleImgCard">

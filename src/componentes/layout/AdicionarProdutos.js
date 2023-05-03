@@ -9,7 +9,7 @@ import balança from "../../img/balança.png";
 import calendario from "../../img/calendario.png";
 import despesas from "../../img/despesas.png";
 import bebidas from "../../img/bebidas.png";
-import hamburguer from "../../img/Hamburger_icon 2.png"
+
 
 const AdicionarProdutos = ({tela, textButton}) =>{
 
@@ -17,9 +17,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
 
         <div className="adicionar" >
         
-        <div className={hamburguer}>
-            <span className='ContainerHamburguer'><img src={hamburguer} width={30}/></span>
-        </div>
+        
 
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">

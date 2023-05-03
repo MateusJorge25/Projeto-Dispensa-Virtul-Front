@@ -9,11 +9,17 @@
 }
 
 .colorTelaPrincipal{
-    padding: 5rem 0 0 0;
     background-color: #fff;
     height: 35rem;    
     justify-content: space-around;
     align-items: center;
+}
+.TelaProdutos{
+    padding: 5rem 0 0 0;
+    background-color: #fff;
+    height: 35rem;    
+    justify-content: start;
+    align-items: start;
 }
 .telaAdicionar{
     padding: 0 0 0 0;

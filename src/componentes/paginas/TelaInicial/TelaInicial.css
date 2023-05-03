@@ -1,7 +1,7 @@
 .cards{
     display: flex;
     align-items: center;
-    width: 20rem;
+    width: 18rem;
     height: 10rem;
     border-radius: 10px;
     border: 2px solid gray;
@@ -13,7 +13,7 @@
 }
 .BtnCardSeta{
     position: absolute;
-    margin: 0 0 5rem 15rem;
+    margin: 0 0 5rem 13rem;
 }
 .PrimeiraLinha{
     display: flex;

@@ -13,7 +13,6 @@ function Alterar_sen() {
     }
     
     return (
-
         <Container>
         <div className="Conteiner">
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
@@ -49,19 +48,12 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerLink">
-
-        <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
-
-            <Link className='conteinerLink' to='Cadastro.js' target='_black'> Criar nova conta</Link>
-            <a className='conteinerLink' href='/cadastro' target='_black'> Criar nova conta</a>
-
-
+            <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
         </div>
 
         </form>
         </div>
         </Container>
-
     );
 }
 

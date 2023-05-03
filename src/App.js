@@ -1,14 +1,15 @@
 import {Route,Routes,Link,BrowserRouter} from "react-router-dom";
-import Cadastro from './componentes/paginas/Cadastro';
-import Login from './componentes/paginas/Login';
+import Cadastro from './componentes/paginas/TeladeCadastro/Cadastro';
+import Login from './componentes/paginas/TeladeLogin/Login';
 import AlterarSenhaEmail from './componentes/paginas/Alterar_sen_email';
-import TelaInicio from './componentes/paginas/TelaInicio';
+import TelaInicio from './componentes/paginas/TelaInicial/TelaInicio';
 import Container from './componentes/layout/Container';
 import AdicionarDespensa from "./componentes/paginas/AdicionarDespensa";
 import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria";
 import EditarCategoria from "./componentes/paginas/EditarCategoria";
 import EditarDespensa from "./componentes/paginas/EditarDespensa";
 import AdicionarProduto  from "./componentes/paginas/AdicionarProduto";
+import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
  
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/cadastro' element={<Cadastro />} />
           <Route exact path='/alterarSenha' element={<AlterarSenhaEmail />} />
           <Route exact path='/home' element={<TelaInicio />} />
+          <Route exact path='/produtos' element={<TotalProdutos/>}/>
         </Routes>
       </Container>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import './Login.css';
-import img from '../../img/7-removebg-preview.png';
-import Container from "../../componentes/layout/Container"
+import img from '../../../img/7-removebg-preview.png';
+import Container from "../../layout/Container"
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 

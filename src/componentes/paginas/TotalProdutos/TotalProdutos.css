@@ -1,0 +1,18 @@
+.ContainerTotalProdutos{
+    width: 100%;
+    height: 100%;
+}
+.BarravoltarProdutos{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5em 25em 0 9rem;
+    height: 3.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+.BarravoltarProdutos > h1{
+    font-size: 1.7rem;
+    padding: 0.5rem;
+}

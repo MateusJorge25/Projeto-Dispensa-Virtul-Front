@@ -1,8 +1,9 @@
-import '../paginas/Cadastro.css';
-import img from '../../img/7-removebg-preview.png';
-import Container from '../layout/Container';
+import './Cadastro.css';
+import img from '../../../img/7-removebg-preview.png';
+import Container from '../../layout/Container';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
 const Cadastro = () =>{
 
     const [email, setEmail] = useState("");
