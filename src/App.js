@@ -9,11 +9,7 @@ import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria";
 import EditarCategoria from "./componentes/paginas/EditarCategoria";
 import EditarDespensa from "./componentes/paginas/EditarDespensa";
 import AdicionarProduto  from "./componentes/paginas/AdicionarProduto";
-<<<<<<< HEAD
 import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
-=======
-import TotalProdutos from "./componentes/paginas/TotalProdutos";
->>>>>>> f56dd81b663274154f7dd2e473768d0c811e8663
  
 function App() {
   return (

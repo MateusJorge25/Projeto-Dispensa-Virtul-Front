@@ -18,13 +18,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
 
         <div className="adicionar" >
         
-<<<<<<< HEAD
         
-=======
-        <div className={hamburguer}>
-            <span className='ContainerHamburguer'><img src={hamburguer} width={30}/></span>
-        </div>
->>>>>>> f56dd81b663274154f7dd2e473768d0c811e8663
 
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
