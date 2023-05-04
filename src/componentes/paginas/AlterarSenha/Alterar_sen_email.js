@@ -1,9 +1,9 @@
 import React from "react";
-import imgCadeado from "../../img/Imagem de cadeado.png"
+import imgCadeado from "../../../img/Imagem de cadeado.png"
 import './Alterar_sen_email.css';
-import imgSeparacao from "../../img/Separação.png"
+import imgSeparacao from "../../../img/Separação.png"
 import { Link } from "react-router-dom";
-import Container from "../layout/Container";
+import Container from "../../layout/Container";
 
 
 function Alterar_sen() {
@@ -18,7 +18,7 @@ function Alterar_sen() {
         <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
 
         <div className='conteinerImg'>
-            <img src={imgCadeado} width={100}></img>
+            <img src={imgCadeado} alt="Imagem Cadeado" width={100}></img>
         </div>
 
         <div className="conteinerTitle">
@@ -42,9 +42,9 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerDivisoria">
-            <img className="linhas" src={imgSeparacao} width={75} height={2} ></img>
+            <img className="linhas" src={imgSeparacao} alt="Separação" width={75} height={2} ></img>
             <p>Ou</p>
-            <img className="linhas" src={imgSeparacao} width={75} height={2}></img>
+            <img className="linhas" src={imgSeparacao} alt="Separação" width={75} height={2}></img>
         </div>
 
         <div className="conteinerLink">

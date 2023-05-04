@@ -1,14 +1,14 @@
-import {Route,Routes,Link,BrowserRouter} from "react-router-dom";
+import {Route,Routes,BrowserRouter} from "react-router-dom";
 import Cadastro from './componentes/paginas/TeladeCadastro/Cadastro';
 import Login from './componentes/paginas/TeladeLogin/Login';
-import AlterarSenhaEmail from './componentes/paginas/Alterar_sen_email';
+import AlterarSenhaEmail from './componentes/paginas/AlterarSenha/Alterar_sen_email';
 import TelaInicio from './componentes/paginas/TelaInicial/TelaInicio';
 import Container from './componentes/layout/Container';
-import AdicionarDespensa from "./componentes/paginas/AdicionarDespensa";
-import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria";
-import EditarCategoria from "./componentes/paginas/EditarCategoria";
-import EditarDespensa from "./componentes/paginas/EditarDespensa";
-import AdicionarProduto  from "./componentes/paginas/AdicionarProduto";
+import AdicionarDespensa from "./componentes/paginas/AdicionarDespensa/AdicionarDespensa";
+import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria/AdicionarCategoria";
+import EditarCategoria from "./componentes/paginas/EditarCategoria/EditarCategoria";
+import EditarDespensa from "./componentes/paginas/EditarDespensa/EditarDespensa";
+import AdicionarProduto  from "./componentes/paginas/AdicionarProdutos/AdicionarProduto";
 import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
  
 function App() {

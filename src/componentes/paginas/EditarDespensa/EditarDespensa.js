@@ -1,6 +1,7 @@
-import Navbar from "../layout/NavBar";
-import Adicionar from "../layout/Adicionar";
-import "../paginas/AdicionarCategoria.css";
+import Navbar from "../../layout/NavBar";
+import Adicionar from "../../layout/Adicionar";
+import "./EditarDespensa.css";
+
 
 const EditarDespensa = ({props}) => {
 

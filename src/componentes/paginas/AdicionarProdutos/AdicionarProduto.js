@@ -1,6 +1,7 @@
-import NavBarProdutos from "../layout/NavBarProdutos";
-import AdiconarProdutos from "../layout/AdicionarProdutos";
-import Container from "../layout/Container";
+import NavBarProdutos from "../../layout/NavBarProdutos";
+import AdiconarProdutos from "../../layout/AdicionarProdutos";
+import Container from "../../layout/Container";
+import "./AdicionarProdutos.css";
 
 const AdicionarProduto = () => {
 
