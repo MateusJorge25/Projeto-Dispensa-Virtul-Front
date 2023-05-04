@@ -28,7 +28,6 @@
 
 .ContainerInputAdicionar{
     display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
     margin: 0.7rem auto;
@@ -65,9 +64,8 @@
 }
 
 .imgCampos{
-    position:absolute;
-    left: 140px;
-    margin: 0.5rem 14.5rem 0;  
+    position: absolute;
+    left: 18rem;
 }
 
 .menos {

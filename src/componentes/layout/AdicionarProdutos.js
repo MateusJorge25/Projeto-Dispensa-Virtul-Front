@@ -43,11 +43,11 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Marca"/>
                     <span className="imgCampos"><img src={armario} width={45}></img></span>
+                    <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Marca"/>
                 </div>
 
-                <div className="ContainerInputAdiconar">
+                <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Unidade(s)"/>
                     <span className="imgCampos"><img src={balança} width={45}></img></span>
                 </div>
