@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     width: 20rem;
-    margin: 18rem auto;
+    margin: 1rem auto;
 }
 
 .BtnCancelar{
@@ -67,7 +67,7 @@
 
 .imgCampos{
     position:absolute;
-    left: 150px;
+    left: 140px;
     margin: 0.5rem 14.5rem 0;  
 }
 
@@ -83,3 +83,4 @@
     display: flex;
     width:2rem;
 }
+
