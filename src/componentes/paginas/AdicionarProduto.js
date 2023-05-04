@@ -1,4 +1,4 @@
-import Navbar from "../layout/NavBar";
+import NavBarProdutos from "../layout/NavBarProdutos";
 import AdiconarProdutos from "../layout/AdicionarProdutos";
 import Container from "../layout/Container";
 
@@ -8,7 +8,7 @@ const AdicionarProduto = () => {
 
         <div> 
         <Container>
-            <Navbar />
+            <NavBarProdutos />
             <AdiconarProdutos tela="Adicionar Produto" textButton="Adicionar"/>
         </Container>
         </div>
