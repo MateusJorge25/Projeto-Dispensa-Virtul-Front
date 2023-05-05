@@ -1,5 +1,6 @@
 import '../layout/NavBar.css';
 import icon from '../../img/Logo.png';
+import hamburguer from "../../img/Hamburger_icon 2.png"
 import Lupa from '../../img/Imagem Lupa.png';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,9 @@ const navbar = () => {
                         <input type="text" name='barraDePesquisa' className="barraDePesquisa" placeholder='Buscar Item'/> 
                         <span className='ContainerIconLupa'><img src={Lupa} alt='IconLupa'width={30}/></span>    
                     </div>   
+                    <div className="Chamburguer">
+                            <span className='iconHamburguer'><img src={hamburguer} width={30}/></span>
+                    </div>      
                 </div>     
             </nav>
         </div>

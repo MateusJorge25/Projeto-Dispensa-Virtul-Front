@@ -38,3 +38,11 @@
     position: absolute;
     margin: 0.5rem 18rem 0 ;
 }
+.Chamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconHamburguer{
+    padding: 0 2rem 0 0;
+}

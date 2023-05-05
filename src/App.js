@@ -10,13 +10,15 @@ import EditarCategoria from "./componentes/paginas/EditarCategoria/EditarCategor
 import EditarDespensa from "./componentes/paginas/EditarDespensa/EditarDespensa";
 import AdicionarProduto  from "./componentes/paginas/AdicionarProdutos/AdicionarProduto";
 import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
- 
+import EditarProdutos from "./componentes/paginas/EditarProdutos/EditarProduto";
+
 function App() {
   return (
     <BrowserRouter>
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Login />} />
+          <Route exact path='/produto/editar'element={<EditarProdutos/>}/>
           <Route exact path='/produto/adicionar'element={<AdicionarProduto/>}/>
           <Route exact path='/despensa/editar' element={<EditarDespensa/>}/>
           <Route exact path='/categoria/editar' element={<EditarCategoria/>} />

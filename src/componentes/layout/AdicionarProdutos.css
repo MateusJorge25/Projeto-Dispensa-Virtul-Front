@@ -65,19 +65,38 @@
 
 .imgCampos{
     position: absolute;
-    left: 18rem;
+    left: 24rem;
 }
 
 .menos {
-    width:1rem;    
+    width: 1rem;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0 1rem;
 }
 
 .mais {
     width: 1rem;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
 }
 
 .contador {
     display: flex;
-    width:2rem;
+    width: 2rem;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
 }
 
+.containerButtonsContadores{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 40%;
+}

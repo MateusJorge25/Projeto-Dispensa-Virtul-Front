@@ -9,16 +9,24 @@ import balança from "../../img/balança.png";
 import calendario from "../../img/calendario.png";
 import despesas from "../../img/despesas.png";
 import bebidas from "../../img/bebidas.png";
+import { useState } from 'react'
 
 
 
 const AdicionarProdutos = ({tela, textButton}) =>{
 
+
+    const [Contador, setContador] = useState("0");
+
+    const handleContador = (event) => {
+        setContador(event.target.value);
+    };
+
     return(
 
         <div className="adicionar" >
         
-        
+            
 
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
@@ -38,8 +46,11 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="Lote" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
                     <span className="imgCampos"><img src={setaCima} width={45}></img></span>
-                    {/* <button className="menos">-</button><input type="text" className="contador"/> <button className="mais">+</button> */}
-                
+                    <div className="containerButtonsContadores">
+                        <button className="menos">-</button>
+                        <input type="text" className="contador" required value={Contador} onChange={(e)=> {handleContador(e)}}/> 
+                        <button className="mais">+</button> 
+                    </div>
                 </div>
 
                 <div className="ContainerInputAdicionar">
