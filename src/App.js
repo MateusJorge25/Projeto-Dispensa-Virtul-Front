@@ -11,6 +11,7 @@ import EditarDespensa from "./componentes/paginas/EditarDespensa/EditarDespensa"
 import AdicionarProduto  from "./componentes/paginas/AdicionarProdutos/AdicionarProduto";
 import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
 import EditarProdutos from "./componentes/paginas/EditarProdutos/EditarProduto";
+import ProdutoListCompras from "./componentes/paginas/AddProdutoLC/ProdutoListCompras";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Login />} />
+          <Route exact path='/produto/listCompras' element={<ProdutoListCompras/>}/>
           <Route exact path='/produto/editar'element={<EditarProdutos/>}/>
           <Route exact path='/produto/adicionar'element={<AdicionarProduto/>}/>
           <Route exact path='/despensa/editar' element={<EditarDespensa/>}/>
@@ -35,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+
