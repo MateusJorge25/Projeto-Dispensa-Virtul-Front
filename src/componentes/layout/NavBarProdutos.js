@@ -12,12 +12,12 @@ const NavBarProdutos = ({}) => {
                     <a className='tagAForicon' href='/home'><img src= {icon} width={60}></img></a>                    
                     <h1>Despensa</h1>
                         <div className="hamburguer">
-                            <span className='ContainerHamburguer'><img src={hamburguer} width={30}/></span>
+                            <a className='ContainerHamburguer' onClick={'clickMenu()'}><img src={hamburguer} width={30}/></a>
                         </div>         
                 </div>     
             </nav>
         </div>
-    )
+    ) 
 }
 
 export default NavBarProdutos;

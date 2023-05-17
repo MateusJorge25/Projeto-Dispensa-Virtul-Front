@@ -1,0 +1,40 @@
+.ContainerCardListaCompras{
+    width: 93rem;
+    height: 5rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.nomeImagemItemCompras{
+    display: flex;
+    align-items: center;
+}
+.imagemDoCardLista{
+    margin: 0 2rem 0 1rem;
+}
+
+.quantidadeItem{
+    display: flex;
+    margin: 0 2rem 0 1rem;
+}
+.BtnCancelar{
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255, 11, 11, 0.65);
+    border: 1px solid rgba(255, 11, 11, 0.65);
+    border-radius: 10px;
+}
+.BtnAdicionar{
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(70, 236, 156, 0.65);
+    border: 1px solid rgba(70, 236, 156, 0.65);
+    border-radius: 10px;
+}

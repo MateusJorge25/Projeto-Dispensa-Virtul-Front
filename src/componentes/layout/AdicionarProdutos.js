@@ -48,7 +48,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                     <span className="imgCampos"><img src={setaCima} width={45}></img></span>
                     <div className="containerButtonsContadores">
                         <button className="menos">-</button>
-                        <input type="text" className="contador" required value={Contador} onChange={(e)=> {handleContador(e)}}/> 
+                        <input type="text" className="contador" required value={Contador} onChange={(e)=> {handleContador(e)}} /> 
                         <button className="mais">+</button> 
                     </div>
                 </div>

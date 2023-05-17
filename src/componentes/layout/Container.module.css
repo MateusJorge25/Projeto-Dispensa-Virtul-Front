@@ -15,9 +15,9 @@
     align-items: center;
 }
 .TelaProdutos{
-    padding: 3rem 0 0 0;
+    padding: 1.5rem 0 0 1.5rem;
     background-color: #fff;
-    height: 35rem;    
+    height: 15rem;    
     justify-content: start;
     align-items: start;
 }
