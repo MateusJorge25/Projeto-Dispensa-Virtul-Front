@@ -12,12 +12,11 @@ const ListaC = () =>{
         <div className="ContainerListaC">
                 <Navbar />
             <div className="BarravoltarListaC">  
-                <Link to={`/home`}><img src={btnVoltar} width={35}/></Link>
+                <Link to={`/home`}><img src={btnVoltar} width={35} alt="BotãoVoltar"/></Link>
                 <h1>Lista de Compras</h1>
             </div>
                 <Container containerMod='TelaProdutos'>
                     <CardItemComprar img={caixaDeLeite} nomeProduto={"Leite"} quantidade={5}/>
-                    <CardItemComprar />
                 </Container>
         </div>
     )

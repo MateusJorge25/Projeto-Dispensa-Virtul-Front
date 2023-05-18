@@ -16,8 +16,8 @@ const CardItemComprar = ({img,nomeProduto, quantidade}) => {
         </div>
         <div className="quantidadeItem">
             <h1>{quantidade}</h1>
-            <button className="BtnCancelar">Item Comprado</button>
-            <button className="BtnAdicionar">Cancelar</button>
+            <button className="btnConfirmarCompra">Item Comprado</button>
+            <button className="BtnExcluirItem">Excluir Item</button>
         </div>
     </div>
     )
