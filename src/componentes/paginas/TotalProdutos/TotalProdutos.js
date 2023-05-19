@@ -3,8 +3,8 @@ import Navbar from "../../layout/NavBar";
 import CardProdutos from "../../layout/CardsProdutos";
 import "./TotalProdutos.css";
 import Container from "../../layout/Container";
-import caixaDeLeite from "../../../img/caixaDeLeite.png"
-import btnVoltar from "../../../img/Botão de voltar.png"
+import caixaDeLeite from "../../../img/caixaDeLeite.png";
+import btnVoltar from "../../../img/Botão de voltar.png";
 
 const TotalProdutos = () => {
 
