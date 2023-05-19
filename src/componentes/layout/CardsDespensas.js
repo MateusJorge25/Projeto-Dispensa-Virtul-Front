@@ -14,10 +14,9 @@ const CardsDespesas = ({img ,nomeProduto}) => {
     return (
         <div className="ContainerDespesas">
             <div className="nomeImagemDespensa">
-                <img className="imagemDoCardCategoria" src={img} width={70} />   
+                <img className="imagemDoCardCategoria" src={img} width={70} />
                 <h1 className="nomeCategoria">{nomeProduto}</h1> 
             </div>
-            
         </div>
     )
 }
