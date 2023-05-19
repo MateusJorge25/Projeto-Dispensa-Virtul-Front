@@ -26,7 +26,6 @@ const Despesa = () => {
     }
 
     const elementos = sendApi(id);
-    let forEachCountries;
 
     return (
         <div className="ContainerDespensaTela">
@@ -35,17 +34,13 @@ const Despesa = () => {
                 <Link to={`/home/${id}`}><img src={btnVoltar} width={35}/></Link>
                 <h1>Despensa</h1>
             </div>
+
             <Container containerMod='TelaProdutos'>  
                 <CardDespesas img={"img"} nomeProduto={"nome"} />
             </Container>
+
         </div>
     )
-
-
-
-
-
-
 }
 
 
