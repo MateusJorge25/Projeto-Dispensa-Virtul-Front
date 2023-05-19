@@ -14,6 +14,8 @@ import EditarProdutos from "./componentes/paginas/EditarProdutos/EditarProduto";
 import ProdutoListCompras from "./componentes/paginas/AddProdutoLC/ProdutoListCompras";
 import ListaCompra from "./componentes/paginas/ListaCompra/ListaC";
 import Despesas from "./componentes/paginas/Despesas/Despesa";
+import RedefinirSenha from "./componentes/paginas/RedefSenha/RedefSenha";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Login />} />
+          <Route exact path='/senha/redefinir' element={<RedefinirSenha/>}/>
           <Route path='/despensas/:id' element={<Despesas/>}/>
           <Route exact path='/listadecompras' element={<ListaCompra/>}/>
           <Route exact path='/produto/listCompras' element={<ProdutoListCompras/>}/>
