@@ -28,13 +28,6 @@ const Despesa = () => {
     const elementos = sendApi(id);
     let forEachCountries;
 
-    const getForEachCountries = () => {
-        elementos.forEach(country => {
-          forEachCountries.push(<li>{country}</li>)
-        })
-        return forEachCountries
-      }
-
     return (
         <div className="ContainerDespensaTela">
             <Navbar />
