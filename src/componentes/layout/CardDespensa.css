@@ -11,7 +11,7 @@
 }
 .imagemDoCardCategoria{
     padding: 0;
-    
+    margin: 0;
 }
 .nomeCategoria{
     font-size: 1.5rem;
@@ -22,26 +22,10 @@
     align-items: center;
     margin:  2rem 0.5rem 1rem 1rem
 }
-.H1Card{
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0 0.4rem;
-}
-.containerInformacoes{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0.5rem 0.5rem;
-}
-.NumeroQuantidade{
-    background-color: rgba(70, 236, 156, 0.8);
-    border-radius: 50px;
-    padding: 3px 7px;
-} 
 
-.nomeImagemDespensa {
-    display:grid;
+.nomeImagemDespensa{
+    display:flex;
     justify-content:center;
     align-items: center;
-
+    flex-direction: column;
 }

@@ -25,7 +25,7 @@ function Menu (){
                             <h1 className="titleCard">Despensa</h1>
                         </div>
                         <div className="BtnCardSeta">
-                            <Link to={`/despensas`}><img src={iconSetaCards} /></Link>
+                            <Link to={`/despensas/${id}`}><img src={iconSetaCards} /></Link>
                         </div>
                     </div>
                     

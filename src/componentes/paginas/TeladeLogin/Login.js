@@ -29,8 +29,8 @@ function Login () {
 
         sessionStorage.setItem("token",`${apijson.token}`);
 
-        if(sessionStorage.getItem("token") == apijson.token){
-            window.location.href = "http://localhost:3001/home";
+        if(sessionStorage.getItem("token") === apijson.token){
+            window.location.href = `http://localhost:3001/home/${apijson.query[0].id}`;
         }else{
             console.log(apijson.message);
         }
