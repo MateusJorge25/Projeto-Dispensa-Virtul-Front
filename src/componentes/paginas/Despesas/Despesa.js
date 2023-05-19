@@ -21,7 +21,7 @@ const Despesa = () => {
                 <CardDespesas img={Geladeira} nomeProduto={"Geladeira"} />
                 <CardDespesas img={Lavanderia} nomeProduto={"Lavanderia"} />
                 <CardDespesas img={ArmarioCozinha} nomeProduto={"Armario Cozinha"} />
-            </Container>
+            </Container>    
         </div>
     )
 
