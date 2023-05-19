@@ -20,6 +20,7 @@ const CardItemComprar = ({img,nomeProduto, quantidade}) => {
             <button className="BtnExcluirItem">Excluir Item</button>
         </div>
     </div>
+
     )
 }
 

@@ -7,7 +7,7 @@ const EditarCategoria = () => {
     return (
         <div className="ContainerEditarCategoria">
                 <Navbar />
-                <Adicionar placeholder="Nome Categoria"  tela=" Editar Categoria" textButton="Salvar"/> 
+                <Adicionar placeholderName="Nome Categoria"  tela=" Editar Categoria" textButton="Salvar" placeholderImg="Escolher Icone"/> 
         </div>
     )
 }

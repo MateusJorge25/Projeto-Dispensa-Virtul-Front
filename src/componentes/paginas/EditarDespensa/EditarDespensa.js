@@ -3,12 +3,13 @@ import Adicionar from "../../layout/Adicionar";
 import "./EditarDespensa.css";
 
 
-const EditarDespensa = ({props}) => {
+const EditarDespensa = () => {
 
     return (
         <div className="ContainerEditardespensa">
                 <Navbar />
-                <Adicionar placeholder="Nome Despensa"  tela=" Editar Despensa" textButton="Salvar"/> 
+                <Adicionar placeholderName="Nome Despensa"  tela=" Editar Despensa" textButton="Salvar" placeholderImg="Escolher Icone"/> 
+                
         </div>
     )
 }
