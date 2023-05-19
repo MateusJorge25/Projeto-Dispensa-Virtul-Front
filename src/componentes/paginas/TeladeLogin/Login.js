@@ -16,15 +16,51 @@ function Login () {
         setPassword(event.target.value);
     };
 
+    const sendApi = async(data) =>{
+        const api = await fetch("http://localhost:3000/login",{
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+
+        const apijson = await api.json();
+
+        sessionStorage.setItem("token",`${apijson.token}`);
+
+        if(sessionStorage.getItem("token") == apijson.token){
+            window.location.href = "http://localhost:3001/home";
+        }else{
+            console.log(apijson.message);
+        }
+
+        // const date = new Date();
+        // date.setHours(date.getHours() + 24);
+
+        // document.cookie = `token=${apijson.token}`;
+        // document.cookie = `expires=${date}`;
+
+    }
+
     const handleSumit = (event) => {
         event.preventDefault();
+
+        let formData =  new FormData(event.target);
+        let data = {};
+
+        for(let pair of formData.entries()){
+            data[pair[0]] = pair[1];
+        }
+
+        sendApi(data);
     }
 
 
     return (
     <Container customClass='.min-height'>
         <div className='Container'>
-            <form onSubmit={handleSumit}>  
+            <form className='formTelaLogin' onSubmit={handleSumit}>  
             <div className='containerImg'>
                 <img src={img} width={100}/>
             </div>  

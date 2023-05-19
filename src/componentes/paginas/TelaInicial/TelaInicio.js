@@ -8,10 +8,11 @@ import iconCategorias from "../../../img/iconCategorias.png";
 import iconItensAVencer from "../../../img/iconItensAVencer.png";
 import iconItensVencidos from "../../../img/iconItensVencidos.png";
 import iconSetaCards from "../../../img/Seta cards.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Menu (){
 
+    const { id } = useParams();
 
     return(
         <div className="container-menu">

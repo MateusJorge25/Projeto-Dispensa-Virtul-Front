@@ -31,7 +31,7 @@ function App() {
           <Route exact path='/despensa/adicionar' element={<AdicionarDespensa/>} />
           <Route exact path='/cadastro' element={<Cadastro />} />
           <Route exact path='/alterarSenha' element={<AlterarSenhaEmail />} />
-          <Route exact path='/home' element={<TelaInicio />} />
+          <Route path='/home/:id' element={<TelaInicio />} />
           <Route exact path='/produtos' element={<TotalProdutos/>}/>
         </Routes>
       </Container>
