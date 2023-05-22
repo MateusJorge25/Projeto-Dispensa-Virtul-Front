@@ -1,8 +1,9 @@
 import './Login.css';
 import img from '../../../img/7-removebg-preview.png';
 import Container from "../../layout/Container"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+
 
 function Login () {
     const [email, setEmail] = useState('');
@@ -34,16 +35,9 @@ function Login () {
         }else{
             console.log(apijson.message);
         }
-
-        // const date = new Date();
-        // date.setHours(date.getHours() + 24);
-
-        // document.cookie = `token=${apijson.token}`;
-        // document.cookie = `expires=${date}`;
-
     }
 
-    const handleSumit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
 
         let formData =  new FormData(event.target);
@@ -60,7 +54,7 @@ function Login () {
     return (
     <Container customClass='.min-height'>
         <div className='Container'>
-            <form className='formTelaLogin' onSubmit={handleSumit}>  
+            <form className='formTelaLogin' onSubmit={handleSubmit}>  
             <div className='containerImg'>
                 <img src={img} width={100}/>
             </div>  

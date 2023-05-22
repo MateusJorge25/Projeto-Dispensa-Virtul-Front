@@ -4,7 +4,7 @@ import './AdicionarProdutos.css';
 import btnVoltar from "../../img/Botão de voltar.png";
 import caixa from "../../img/caixa.png";
 import setaCima from "../../img/seta cima.png";
-import armario from "../../img/armario.png";
+import armario from "../../img/Prateleira.png";
 import balança from "../../img/balança.png";
 import calendario from "../../img/calendario.png";
 import despesas from "../../img/despesas.png";

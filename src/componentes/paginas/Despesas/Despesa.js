@@ -5,9 +5,7 @@ import "./Despesa.css";
 import { useEffect, useState } from "react";
 import CardDespesas from "../../layout/CardsDespensas";
 import btnVoltar from "../../../img/Botão de voltar.png"
-import Geladeira from "../../../img/iconGeladeira.png";
-import Lavanderia from "../../../img/lavanderia.png";
-import ArmarioCozinha from "../../../img/armarioCozinha.png";
+
 
 const Despesa = () => {
 

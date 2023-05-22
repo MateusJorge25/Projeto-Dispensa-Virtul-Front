@@ -1,6 +1,6 @@
 .ContainerCardProdutos{
-    width: 15rem;
-    height: 9rem;
+    width: 16rem;
+    height: 10rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: #ffffff;
@@ -18,23 +18,28 @@
     color: rgba(0, 0, 0, 0.8);
 }
 .InformacoesProdutos{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin:  2rem 0.5rem 1rem 1rem
 }
 .H1Card{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.8);
     margin: 0 0.4rem;
 }
 .containerInformacoes{
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
-    margin: 0.5rem 0.5rem;
+    margin: 0.3rem 0.3rem;
 }
 .NumeroQuantidade{
     background-color: rgba(70, 236, 156, 0.8);
     border-radius: 50px;
     padding: 3px 7px;
+}
+.Btncard{
+    margin-left: 7.5rem;
 }

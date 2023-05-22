@@ -23,7 +23,7 @@ function App() {
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Login />} />
-          <Route exact path='/senha/redefinir' element={<RedefinirSenha/>}/>
+          <Route path='/alterar-senha/:tokenparam' element={<RedefinirSenha />}/>
           <Route path='/despensas/:id' element={<Despesas/>}/>
           <Route exact path='/listadecompras' element={<ListaCompra/>}/>
           <Route exact path='/produto/listCompras' element={<ProdutoListCompras/>}/>
@@ -36,7 +36,7 @@ function App() {
           <Route exact path='/cadastro' element={<Cadastro />} />
           <Route exact path='/alterarSenha' element={<AlterarSenhaEmail />} />
           <Route path='/home/:id' element={<TelaInicio />} />
-          <Route exact path='/produtos' element={<TotalProdutos/>}/>
+          <Route path='/produtos/:id' element={<TotalProdutos/>}/>
         </Routes>
       </Container>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import Navbar from "../../layout/NavBar.js";
 import Container from "../../layout/Container.js";
 import './TelaInicial.css';
 import iconDespensa from "../../../img/iconDespensa.png";
-import iconTodosOsProdutos from "../../../img/iconTodosOsProdutos.png";
+import iconTodosOsProdutos from "../../../img/Todos os Produtos.png";
 import iconListaDeCompras from "../../../img/iconListaDeCompras.png";
 import iconCategorias from "../../../img/iconCategorias.png";
 import iconItensAVencer from "../../../img/iconItensAVencer.png";
@@ -35,7 +35,7 @@ function Menu (){
                             <h1 className="titleCard">Todos os Produtos</h1>
                         </div>
                         <div className="BtnCardSeta">
-                            <Link to={`/produtos`}><img src={iconSetaCards} /></Link>
+                            <Link to={`/produtos/${id}`}><img src={iconSetaCards} /></Link>
                         </div>
                     </div>
 

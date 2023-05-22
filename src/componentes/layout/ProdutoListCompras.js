@@ -3,7 +3,7 @@ import Container from "./Container";
 import './ProdutoListCompras.css';
 import btnVoltar from "../../img/Botão de voltar.png";
 import setaCima from "../../img/seta cima.png";
-import armario from "../../img/armario.png";
+import armario from "../../img/Prateleira.png";
 import bebidas from "../../img/bebidas.png";
 import { useState } from 'react'
 

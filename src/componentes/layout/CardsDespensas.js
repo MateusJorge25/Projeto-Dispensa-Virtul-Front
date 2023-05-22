@@ -1,14 +1,26 @@
 import "../layout/CardDespensa.css";
-import Geladeira from "../../img/iconGeladeira.png";
-import Lavanderia from "../../img/lavanderia.png";
-import ArmarioCozinha from "../../img/armarioCozinha.png";
-import caixaDeLeite from "../../img/caixaDeLeite.png";
+import Lavanderia from "../../img/MaquinaDeLavar.png";
+import ArmarioCozinha from "../../img/Armario de cozinha.png";
+import Prateleira from "../../img/Prateleira.png";
+import Geladeira from "../../img/Geladeira.png";
+import TodosOsProdutos from "../../img/Todos os Produtos.png";
 
 const CardsDespesas = ({img ,nomeProduto}) => {
 //como vamos receber as imagens atravez da string acredito que vamos precisa fazer uma validação semelhante a esta:
     let imagem;
-    if (img == "MaquinaDeLavar"){
-        imagem = caixaDeLeite;
+    switch (img) {
+        case "MaquinaDeLavar": imagem = Lavanderia;
+        break;
+        case "ArmarioDeCozinha": imagem = ArmarioCozinha;
+        break;
+        case "Prateleira": imagem = Prateleira;
+        break;
+        case "Geladeira": imagem = Geladeira;
+        break;
+        case "TodosOsProdutos": imagem = TodosOsProdutos;
+        break;
+        default:
+            break;
     }
 
     return (

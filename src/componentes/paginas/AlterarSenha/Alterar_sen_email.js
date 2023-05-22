@@ -11,11 +11,38 @@ function Alterar_sen() {
     const handleSumit = (event) => {
         event.preventDefault();
     }
+    const sendApi = async(data) =>{
+
+        const api = await fetch(`http://localhost:3000/esqueci-senha`,{
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data),
+        })
+
+        const apijson = await api.json();
+        console.log(apijson);
+        return apijson;
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        let formData =  new FormData(event.target);
+        let data = {};
+
+        for(let pair of formData.entries()){
+            data[pair[0]] = pair[1];
+        }
+
+        sendApi(data);
+    }
     
     return (
         <Container>
         <div className="Conteiner">
-        <form  className="FormEsqueceuSenha" onSubmit={handleSumit}>
+        <form  className="FormEsqueceuSenha" onSubmit={handleSubmit}>
 
         <div className='conteinerImg'>
             <img src={imgCadeado} alt="Imagem Cadeado" width={100}></img>

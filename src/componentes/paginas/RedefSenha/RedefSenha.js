@@ -2,18 +2,64 @@ import React from "react";
 import imgCadeado from "../../../img/Imagem de cadeado.png"
 import './RedefSenha.css';
 import Container from "../../layout/Container";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 
 function RedefSenha() {
     
-    const handleSumit = (event) => {
+    const { tokenparam } = useParams();
+
+    const [Iptsenha, setIptSenha] = useState("");
+
+    const handlenewPassword = (e)=>{
+        setIptSenha(e.target.value);
+    }
+
+
+    const sendApi = async(data, tokenparam) =>{
+
+        const api = await fetch(`http://localhost:3000/alterar-senha/${tokenparam}`,{
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data),
+        })
+
+        const apijson = await api.json();
+        console.log(apijson);
+        return apijson;
+    }
+
+    const verificar = async(data, tokenparam) =>{
+        const resApi = await sendApi(data,tokenparam);
+        if(resApi.message == "Senha Alterada!"){
+            window.location.href = `http://localhost:3001/`;
+        }
+    }
+
+    
+
+    const handleSubmit = (event) => {
         event.preventDefault();
+
+        let formData =  new FormData(event.target);
+        let data = {};
+
+        for(let pair of formData.entries()){
+            data[pair[0]] = pair[1];
+        }
+
+        verificar(data,tokenparam);
     }
     
+    
+
     return (
         <Container>
         <div className="Conteiner">
-        <form  className="FormRedfSenha" onSubmit={handleSumit}>
+        <form className="FormRedfSenha" onSubmit={handleSubmit}>
 
         <div className='conteinerImg'>
             <img src={imgCadeado} alt="Imagem Cadeado" width={100}></img>
@@ -32,8 +78,8 @@ function RedefSenha() {
         </div>
 
         <div className="conteinerBox">
-            <input type='text' className='inptPassword' name='password' placeholder='Insira uma nova senha' />
-            <input type='text' className='inptPassword' name= 'password' placeholder='Confirme a nova senha' /> 
+            <input type='text' className='inptPassword' name='novaSenha' placeholder='Insira uma nova senha' value={Iptsenha} required onChange={(e)=>{handlenewPassword(e)}}/>
+            {/* <input type='text' className='inptPassword' name= 'password' placeholder='Confirme a nova senha' />  */}
         </div>
 
         <div className="conteinerBTN">
