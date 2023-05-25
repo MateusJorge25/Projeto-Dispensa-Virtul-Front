@@ -1,0 +1,110 @@
+.ContainerTelaVerItem{
+    width: 100%;
+    height: 100%;
+}
+.BarravoltarVerItem{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5em 25em 0 9rem;
+    height: 3.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+.BarravoltarVerItem > h1 {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+.containerNomeImgCategoriaInfoProduto{
+    border-radius: 25px;
+    border:  2px solid  rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 8rem;
+    gap: 13rem;
+    margin: 0 2rem;
+}
+.NomeEImagemProduto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.NomeEImagemProduto > img{
+    margin-left: 5rem;
+}
+.NomeEImagemProduto >h1 {
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+.spansVerProdutos{
+    background: rgba(70, 236, 156, 0.2);
+    border-radius: 10px;
+    display:  flex;
+    justify-content: start;
+    align-items: center;
+    width: 20rem;
+}
+.spansVerProdutos > img {
+    margin: 0.5rem 0rem 0.5rem 1rem;
+}
+.spansVerProdutos > h1{
+    color: #000000;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+.containerMaisInformaçõesProduto{
+    border-radius: 25px;
+    border:  2px solid  rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 16rem;
+    margin: 2rem 2rem;
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+.primeiraLinhaDoContainer{
+    display: flex;
+    align-items: start;
+    gap: 6rem;
+    justify-content: space-between;
+}
+.containerbotoes{
+    border-radius: 25px;
+    border:  2px solid  rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 6rem;
+    gap: 10rem;
+    margin: 0 2rem 2rem 2rem;
+}
+.spanscontainerBotoes{
+    background: rgba(70, 236, 156, 0.2);
+    border-radius: 10px;
+    display:  flex;
+    justify-content: start;
+    align-items: center;
+    width: 35rem;
+    height: 4rem;
+}
+.spanscontainerBotoes > img {
+    margin: 0.5rem 0rem 0.5rem 1rem;
+    
+}
+.spanscontainerBotoes > h1{
+    color: #000000;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+.BtnDeleteProduto{
+    background-color: transparent;
+    border: none;
+}

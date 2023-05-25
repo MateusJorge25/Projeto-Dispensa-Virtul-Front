@@ -36,7 +36,9 @@
 }
 .ContainerIconLupa{
     position: absolute;
-    margin: 0.5rem 18rem 0 ;
+    right: 23.3rem;
+    margin: 0.5rem 0;
+    
 }
 .Chamburger{
     display: flex;

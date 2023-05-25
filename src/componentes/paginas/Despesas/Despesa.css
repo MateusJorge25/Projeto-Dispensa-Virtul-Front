@@ -16,6 +16,11 @@
     font-size: 1.7rem;
     padding: 0.5rem;
 }
+.BtnAdicionarCategoria{
+    position: absolute;
+    right: 10rem;
+    top: 35rem
+}
 
 
 

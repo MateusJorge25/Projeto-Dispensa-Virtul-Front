@@ -37,8 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 20rem;
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 
 .BtnCancelar{
@@ -49,7 +48,11 @@
     background: rgba(255, 11, 11, 0.65);
     border: 1px solid rgba(255, 11, 11, 0.65);
     border-radius: 10px;
-    
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgba(0, 0, 0)
 }
 
 .BtnAdicionar{
@@ -65,7 +68,7 @@
 
 .imgCampos{
     position: absolute;
-    left: 24rem;
+    left: 40rem;
 }
 
 .menos {
@@ -101,4 +104,10 @@
     justify-content: end;
     align-items: center;
     width: 40%;
+}
+
+.AvisoCarregando{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

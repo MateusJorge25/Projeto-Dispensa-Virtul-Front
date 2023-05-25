@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Container from "./Container";
 import './ProdutoListCompras.css';
 import btnVoltar from "../../img/Botão de voltar.png";
-import setaCima from "../../img/seta cima.png";
+import setaCima from "../../img/iconQuantidade.png";
 import armario from "../../img/Prateleira.png";
-import bebidas from "../../img/bebidas.png";
+import bebidas from "../../img/Bebidas.png";
 import { useState } from 'react'
 
 

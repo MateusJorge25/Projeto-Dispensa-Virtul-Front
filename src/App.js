@@ -4,10 +4,10 @@ import Login from './componentes/paginas/TeladeLogin/Login';
 import AlterarSenhaEmail from './componentes/paginas/AlterarSenha/Alterar_sen_email';
 import TelaInicio from './componentes/paginas/TelaInicial/TelaInicio';
 import Container from './componentes/layout/Container';
-import AdicionarDespensa from "./componentes/paginas/AdicionarDespensa/AdicionarDespensa";
+import AdicionarDespensas from "./componentes/paginas/AdicionarDespensas/AdicionarDespensas";
 import AdicionarCategoria from "./componentes/paginas/AdicionarCategoria/AdicionarCategoria";
 import EditarCategoria from "./componentes/paginas/EditarCategoria/EditarCategoria";
-import EditarDespensa from "./componentes/paginas/EditarDespensa/EditarDespensa";
+import EditarDespensas from "./componentes/paginas/EditarDespensas/EditarDespensas";
 import AdicionarProduto  from "./componentes/paginas/AdicionarProdutos/AdicionarProduto";
 import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
 import EditarProdutos from "./componentes/paginas/EditarProdutos/EditarProduto";
@@ -15,6 +15,7 @@ import ProdutoListCompras from "./componentes/paginas/AddProdutoLC/ProdutoListCo
 import ListaCompra from "./componentes/paginas/ListaCompra/ListaC";
 import Despesas from "./componentes/paginas/Despesas/Despesa";
 import RedefinirSenha from "./componentes/paginas/RedefSenha/RedefSenha";
+import TelaVerItem from "./componentes/paginas/TelaVerItem/TelaVerItem";
 
 
 function App() {
@@ -27,16 +28,17 @@ function App() {
           <Route path='/despensas/:id' element={<Despesas/>}/>
           <Route exact path='/listadecompras' element={<ListaCompra/>}/>
           <Route exact path='/produto/listCompras' element={<ProdutoListCompras/>}/>
-          <Route exact path='/produto/editar'element={<EditarProdutos/>}/>
-          <Route exact path='/produto/adicionar'element={<AdicionarProduto/>}/>
-          <Route exact path='/despensa/editar' element={<EditarDespensa/>}/>
+          <Route path='/produto/editar/:id'element={<EditarProdutos/>}/>
+          <Route path='/produto/adicionar/:id'element={<AdicionarProduto/>}/>
+          <Route path='/despensa/editar/:id' element={<EditarDespensas/>}/>
           <Route exact path='/categoria/editar' element={<EditarCategoria/>} />
           <Route exact path='/categoria/adicionar' element={<AdicionarCategoria/>} />
-          <Route exact path='/despensa/adicionar' element={<AdicionarDespensa/>} />
+          <Route path='/despensa/adicionar/:id' element={<AdicionarDespensas/>} />
           <Route exact path='/cadastro' element={<Cadastro />} />
           <Route exact path='/alterarSenha' element={<AlterarSenhaEmail />} />
           <Route path='/home/:id' element={<TelaInicio />} />
           <Route path='/produtos/:id' element={<TotalProdutos/>}/>
+          <Route path='/produto/info/:id' element={<TelaVerItem/>}/>
         </Routes>
       </Container>
     </BrowserRouter>

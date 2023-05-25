@@ -1,20 +1,20 @@
 import NavBarProdutos from "../../layout/NavBarProdutos";
-import AdiconarProdutos from "../../layout/AdicionarProdutos";
+import EditarProduto from "../../layout/EditarProdutos";
 import Container from "../../layout/Container";
 import  "./EditarProduto.css";
 
-const EditarProduto = () => {
+const EditarProdutos = () => {
 
     return (
 
         <div> 
         <Container>
             <NavBarProdutos />
-            <AdiconarProdutos tela="Editar Produto" textButton="Salvar"/>
+            <EditarProduto tela="Editar Produto" textButton="Salvar"/>
         </Container>
         </div>
 
     )
 }
 
-export default EditarProduto;
+export default EditarProdutos;
