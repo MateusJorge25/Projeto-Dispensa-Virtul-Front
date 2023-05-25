@@ -45,7 +45,7 @@ function Menu (){
                             <h1 className="titleCard">Lista de Compras</h1>
                         </div>
                         <div className="BtnCardSeta">
-                            <Link to={`/listadecompras`}><img src={iconSetaCards} /></Link>
+                            <Link to={`/listadecompras/${id}`}><img src={iconSetaCards} /></Link>
                         </div>
                     </div>
                 </div>         
@@ -57,7 +57,7 @@ function Menu (){
                         <h1 className="titleCard">Categorias</h1>
                     </div>
                     <div className="BtnCardSeta">
-                        <Link to={`/categorias`}><img src={iconSetaCards} /></Link>
+                        <Link to={`/categorias/${id}`}><img src={iconSetaCards} /></Link>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 import Navbar from "../../layout/NavBar";
-import Adicionar from "../../layout/Adicionar";
+import EditCategoria from "../../layout/EditCategoria";
 import "./EditarCategoria.css";
 
 const EditarCategoria = () => {
@@ -7,7 +7,7 @@ const EditarCategoria = () => {
     return (
         <div className="ContainerEditarCategoria">
                 <Navbar />
-                <Adicionar placeholderName="Nome Categoria"  tela=" Editar Categoria" textButton="Salvar" placeholderImg="Escolher Icone"/> 
+                <EditCategoria placeholderImg="Escolher Icone" placeholderName="Nome Categoria" tela="Editar Categoria" textButton= "Adicionar"/>
         </div>
     )
 }

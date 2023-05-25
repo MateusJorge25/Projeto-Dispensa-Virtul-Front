@@ -9,10 +9,9 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import iconEditar from "../../img/IconEditar.png";
 import iconDeletar from "../../img/IconDeletar.png";
-import iconStatusOn from "../../img/IconStatus.png";
-import iconStatusOff from "../../img/iconStatusoff.png";
+// import iconStatusOff from "";
 
-const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
+const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
 
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const {id} = useParams();
@@ -33,27 +32,10 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
             break;
     }
 
-    const handleAltStatus = async(e, idDespensa, idUser) => {
+    const handleDeleteCategoria = async(e, idCategoria, idUser) => {
         e.preventDefault();
         try{
-            const responseStatus = await fetch(`http://localhost:3000/local/update/status/${idDespensa}`,{
-                method:"PUT",
-                headers:{
-                    "Content-Type": "application/json",
-                    "Authorization": sessionStorage.getItem("token"),
-                }
-            })
-            window.location.href = `/despensas/${idUser}`;
-            return responseStatus;
-        }catch(error){
-            console.log(error);
-        }
-    }
-
-    const handleDeleteDespensa = async(e, idDespensa, idUser) => {
-        e.preventDefault();
-        try{
-            const respondeDelete = await fetch(`http://localhost:3000/local/delete/${idDespensa}`,{
+            const respondeDelete = await fetch(`http://localhost:3000/categorias/delete/${idCategoria}`,{
                 method:"DELETE",
                 headers:{
                     "Content-Type": "application/json",
@@ -61,7 +43,7 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
                 }
             });
             
-            window.location.href = `/despensas/${idUser}`;
+            window.location.href = `/categorias/${idUser}`;
             // console.log(respondeDelete)
             return respondeDelete;
         }catch(error){
@@ -72,12 +54,7 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
     const handleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
     };
-    let imgstatus;
-    if(status == 1){
-        imgstatus = iconStatusOn;
-    }else{
-        imgstatus = iconStatusOff;
-    }
+    
     
 
     return (
@@ -86,18 +63,17 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
                 <button onClick={handleMenu} className="btnTresOpt"><img src={tresPontinho} width={30}/></button>
                     {isMenuVisible &&(
                         <ul className="ulDespensa">
-                            <li><button className="btnAltStatus" onClick={(e) => {handleAltStatus(e,idDespensa,idUser)}}><img src={imgstatus} width={20}/>Status</button></li>
-                            <li><Link to={`/despensa/editar/${idDespensa}`} className="LinkEditDespensa"><img src={iconEditar} width={20}/>Editar</Link></li>
-                            <li><button className="btnDelDespensa" onClick={(e) => {handleDeleteDespensa(e, idDespensa, idUser)}}><img src={iconDeletar} width={20}/>Excluir</button></li>
+                            <li><Link to={`/categoria/editar/${idCategoria}`} className="LinkEditDespensa"><img src={iconEditar} width={20}/>Editar</Link></li>
+                            <li><button className="btnDelDespensa" onClick={(e) => {handleDeleteCategoria(e, idCategoria, idUser)}}><img src={iconDeletar} width={20}/>Excluir</button></li>
                         </ul>
                     )}
             </div>
             <div className="nomeImagemDespensa">
-                <img className="imagemDoCardCategoria" src={imagem} width={70} />
-                <h1 className="nomeCategoria">{nomeProduto}</h1> 
+                <img className="imagemDoCardCategoria" src={img} width={70} />
+                <h1 className="nomeCategoria">{nome}</h1> 
             </div>
         </div>
     )
 }
 
-export default CardsDespesas;
+export default CardsCategorias;

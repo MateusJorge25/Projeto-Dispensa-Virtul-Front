@@ -29,7 +29,7 @@ const Despesa = () => {
         sendApi(id);
     },[])
 
-    if (Data === null) {
+    if (Data == null) {
         return <div>Carregando...</div>;
       }
     
