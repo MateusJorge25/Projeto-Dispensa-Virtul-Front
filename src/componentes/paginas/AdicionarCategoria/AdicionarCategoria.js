@@ -1,5 +1,5 @@
-import Navbar from "../../layout/NavBar";
-import AdicionarCategoria from "../../layout/AdicionarCategoria";
+import Navbar from "../../layout/NavBar/NavBar";
+import AdicionarCategoria from "../../layout/AdicionarCategoria/AdicionarCategoria";
 import "./AdicionarCategoria.css";
 
 const AdiciCategoria = () =>{

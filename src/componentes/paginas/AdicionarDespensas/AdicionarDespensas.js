@@ -1,4 +1,4 @@
-import Navbar from "../../layout/NavBar";
+import Navbar from "../../layout/NavBar/NavBar";
 import AdicionarDespensa from "../../layout/AdicionarDespensa";
 import "./AdicionarDespensas.css"
 

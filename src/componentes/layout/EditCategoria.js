@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
-import './Adicionar.css';
+import '../layout/Adicionar/Adicionar.css';
 import btnVoltar from "../../img/Botão de voltar.png";
 import btnsetaBaixo from "../../img/seta baixo.png";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ const EditCategoria = ({tela, placeholderName, textButton, placeholderImg}) =>{
             return resApiJson;
         };
         getInfo(id);
-    },[1])
+    },[])
 
 
 
@@ -68,13 +68,13 @@ const EditCategoria = ({tela, placeholderName, textButton, placeholderImg}) =>{
         newarray[index] = {...newarray[index], nome: novovalor};
         setData(newarray);
     };
-    const handleImg = (event) =>{
-        const novovalor = event.target.value;
-        const index = 0;
-        const newarray = [...Data];
-        newarray[index] = {...newarray[index], img: novovalor};
-        setData(newarray);
-    };
+    // const handleImg = (event) =>{
+    //     const novovalor = event.target.value;
+    //     const index = 0;
+    //     const newarray = [...Data];
+    //     newarray[index] = {...newarray[index], img: novovalor};
+    //     setData(newarray);
+    // };
     if(Data === null){
         return <div className="AvisoCarregando">Carregando</div>
     }
@@ -91,8 +91,12 @@ const EditCategoria = ({tela, placeholderName, textButton, placeholderImg}) =>{
                     <input type="text" name="nome" className="InputAdicionar" required value={Data[0].nome} onChange={(e)=>{handleNome(e)}} placeholder={placeholderName}/>    
                 </div>
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionar" required value={Data[0].img} onChange={(e)=>{handleImg(e)}} placeholder={placeholderImg}/>
-                    <span><img src={btnsetaBaixo} width={45}></img></span>
+                    <select className="SelectInput" name="img" required >
+                        <option value={Data[0].img} disabled selected> {Data[0].img}</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Frios">Frios</option>
+                    </select>
+                    {/* <input type="text" name="img" className="InputAdicionar" required value={Data[0].img} onChange={(e)=>{handleImg(e)}} placeholder={placeholderImg}/> */}
                 </div>
 
                 <div className="BtnsAdicionar">

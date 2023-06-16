@@ -1,4 +1,4 @@
-import Navbar from "../../layout/NavBar";
+import Navbar from "../../layout/NavBar/NavBar";
 import EditCategoria from "../../layout/EditCategoria";
 import "./EditarCategoria.css";
 

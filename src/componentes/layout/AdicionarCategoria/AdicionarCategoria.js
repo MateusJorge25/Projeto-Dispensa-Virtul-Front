@@ -1,8 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import Container from "./Container";
-import './Adicionar.css';
-import btnVoltar from "../../img/Botão de voltar.png";
-import btnsetaBaixo from "../../img/seta baixo.png";
+import Container from "../Container";
+import '../../layout/Adicionar/Adicionar.css';
+import btnVoltar from "../../../img/Botão de voltar.png";
+import CaixaDeLeite from "../../../img/caixaDeLeite.png";
+import CaideDeSucoDeLaranja from "../../../img/CaixaDeSucoDeLaranja.png";
+import PoteDeYogurt from "../../../img/PoteDeYogurt.png";
 
 const AdicionarCategoria = ({tela, placeholderName, textButton, placeholderImg}) =>{
 
@@ -20,7 +22,6 @@ const AdicionarCategoria = ({tela, placeholderName, textButton, placeholderImg})
         })
 
         const apijson = await api.json();
-        // console.log(apijson);
         window.location.href = `/categorias/${id}`;
         return apijson;
     }
@@ -48,18 +49,22 @@ const AdicionarCategoria = ({tela, placeholderName, textButton, placeholderImg})
                     <h1>{tela}</h1>
                 </div>
                 <form onSubmit={handleForm}>
-                <div className="ContainerInputAdicionar">
-                    <input type="text" name="nome" className="InputAdicionar" placeholder={placeholderName}/>    
-                </div>
-                <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionar" placeholder={placeholderImg}/>
-                    <span><img src={btnsetaBaixo} width={45}></img></span>
-                </div>
+                    <div className="ContainerInputAdicionar">
+                        <input type="text" name="nome" className="InputAdicionar" placeholder={placeholderName}/>    
+                    </div>
+                    <div className="ContainerInputAdicionar">
+                        <select className="SelectInput" name="img" required>
+                            <option value="" disabled selected> Escolha um icone</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Frios">Frios</option>
+                        </select>
+                        {/* <input type="text"  className="InputAdicionar" placeholder={placeholderImg}/> */}
+                    </div>
 
-                <div className="BtnsAdicionar">
-                    <Link to={`/categorias/${id}`} className="BtnCancelar">Cancelar</Link>
-                    <button type='submit' className="BtnAdicionar">{textButton}</button>
-                </div>
+                    <div className="BtnsAdicionar">
+                        <Link to={`/categorias/${id}`} className="BtnCancelar">Cancelar</Link>
+                        <button type='submit' className="BtnAdicionar">{textButton}</button>
+                    </div>
                 </form>
             </Container>
         </div>

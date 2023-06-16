@@ -1,14 +1,14 @@
-import "../layout/CardProdutos.css"
-import IconValidade from "../../img/iconItensAVencer.png";
-import Lavanderia from "../../img/MaquinaDeLavar.png";
-import ArmarioCozinha from "../../img/Armario de cozinha.png";
-import Prateleira from "../../img/Prateleira.png";
-import Geladeira from "../../img/Geladeira.png";
-import TodosOsProdutos from "../../img/Todos os Produtos.png";
-import CaixaDeLeite from "../../img/caixaDeLeite.png";
-import CaideDeSucoDeLaranja from "../../img/CaixaDeSucoDeLaranja.png";
-import PoteDeYogurt from "../../img/PoteDeYogurt.png";
-import SetaDireita from "../../img/Seta cards.png";
+import "./CardProdutos.css"
+import IconValidade from "../../../img/iconItensAVencer.png";
+import Lavanderia from "../../../img/MaquinaDeLavar.png";
+import ArmarioCozinha from "../../../img/Armario de cozinha.png";
+import Prateleira from "../../../img/Prateleira.png";
+import Geladeira from "../../../img/Geladeira.png";
+import TodosOsProdutos from "../../../img/Todos os Produtos.png";
+import CaixaDeLeite from "../../../img/caixaDeLeite.png";
+import CaideDeSucoDeLaranja from "../../../img/CaixaDeSucoDeLaranja.png";
+import PoteDeYogurt from "../../../img/PoteDeYogurt.png";
+import SetaDireita from "../../../img/Seta cards.png";
 import { Link } from "react-router-dom";
 
 const CardProdutos = ({img ,nomeProduto,quantidade, despensa, validade, imgDespensa,idProduto}) => {

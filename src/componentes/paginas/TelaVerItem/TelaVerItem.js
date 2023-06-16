@@ -1,5 +1,5 @@
 import "./TelaVerItem.css";
-import NavBar from "../../layout/NavBar";
+import NavBar from "../../layout/NavBar/NavBar";
 import Container from "../../layout/Container";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";

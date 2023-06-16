@@ -1,10 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
-import './Adicionar.css';
+import '../layout/Adicionar/Adicionar.css';
 import btnVoltar from "../../img/Botão de voltar.png";
 import btnsetaBaixo from "../../img/seta baixo.png";
-import { useEffect } from "react";
-import { useState } from "react";
 
 const AdicionarDespensa = ({tela, placeholderName, textButton, placeholderImg}) =>{
 

@@ -47,4 +47,17 @@
 }
 .iconHamburguer{
     padding: 0 2rem 0 0;
+    border:none;
+    background-color: transparent;
+}
+.ulNav{
+        padding: 10px;
+        position: absolute;
+        right: 5rem;
+        top: 4rem; 
+        list-style: none;
+        background-color:  rgba(70, 236, 156, 0.2);
+        width: 8rem;
+        height: 7rem;
+        padding: 10px;
 }

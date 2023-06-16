@@ -1,32 +1,21 @@
 import "../layout/CardDespensa.css";
-import Lavanderia from "../../img/MaquinaDeLavar.png";
-import ArmarioCozinha from "../../img/Armario de cozinha.png";
-import Prateleira from "../../img/Prateleira.png";
-import Geladeira from "../../img/Geladeira.png";
-import TodosOsProdutos from "../../img/Todos os Produtos.png";
 import tresPontinho from "../../img/tresPontinhos.png";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import iconEditar from "../../img/IconEditar.png";
 import iconDeletar from "../../img/IconDeletar.png";
-// import iconStatusOff from "";
+import Bebidas from "../../img/Bebidas.png";
+import Frios from "../../img/Frios.png"
 
 const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
 
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-    const {id} = useParams();
 
     let imagem;
     switch (img) {
-        case "MaquinaDeLavar": imagem = Lavanderia;
+        case "Frios": imagem = Frios;
         break;
-        case "ArmarioDeCozinha": imagem = ArmarioCozinha;
-        break;
-        case "Prateleira": imagem = Prateleira;
-        break;
-        case "Geladeira": imagem = Geladeira;
-        break;
-        case "TodosOsProdutos": imagem = TodosOsProdutos;
+        case "Bebidas": imagem = Bebidas;
         break;
         default:
             break;
@@ -56,7 +45,6 @@ const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
     };
     
     
-
     return (
         <div className="ContainerDespesas">
             <div className="containerbtncartDespensa">
@@ -69,7 +57,7 @@ const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
                     )}
             </div>
             <div className="nomeImagemDespensa">
-                <img className="imagemDoCardCategoria" src={img} width={70} />
+                <img className="imagemDoCardCategoria" src={imagem} width={70} />
                 <h1 className="nomeCategoria">{nome}</h1> 
             </div>
         </div>

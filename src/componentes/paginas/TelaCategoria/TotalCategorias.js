@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import Navbar from "../../layout/NavBar";
+import Navbar from "../../layout/NavBar/NavBar";
 import "./TotalCategorias.css";
 import Container from "../../layout/Container";
 import IconBtnAdicionar from "../../../img/BotãoAdicionar.png";

@@ -94,7 +94,7 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
             </div>
             <div className="nomeImagemDespensa">
                 <img className="imagemDoCardCategoria" src={imagem} width={70} />
-                <h1 className="nomeCategoria">{nomeProduto}</h1> 
+                <p className="nomeCategoria">{nomeProduto}</p> 
             </div>
         </div>
     )

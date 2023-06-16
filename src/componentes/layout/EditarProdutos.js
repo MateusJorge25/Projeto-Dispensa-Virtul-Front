@@ -2,24 +2,16 @@ import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
 import './AdicionarProdutos.css';
 import btnVoltar from "../../img/Botão de voltar.png";
-import caixa from "../../img/caixa.png";
-import setaCima from "../../img/iconQuantidade.png";
-import armario from "../../img/Prateleira.png";
-import balança from "../../img/balança.png";
-import calendario from "../../img/calendario.png";
-import despesas from "../../img/despesas.png";
-import bebidas from "../../img/Bebidas.png";
-import { useState } from 'react'
-import { useEffect } from "react";
-
+import DatePicker from "react-datepicker";
+import { useState, useEffect } from "react";
 
 
 const EditarProduto = ({tela, textButton}) =>{
 
-
     const { id } = useParams();
     const [Data, setData] = useState(null);
-
+    const [startDate, setStartDate] = useState(null);
+    
 
     useEffect(() => {
         const getInfo = async (id) =>{
@@ -31,12 +23,45 @@ const EditarProduto = ({tela, textButton}) =>{
                 }
             })
             const resApiJson = await resApi.json();
+            console.log(resApiJson);
             setData(resApiJson);
-            // console.log(resApiJson);
-            return resApiJson;
+
+            const datadb = resApiJson[0].dataDeValidade.slice(0,10);
+            const dateObj = new Date(datadb);
+            const adjustedDate = new Date(dateObj.getTime() + dateObj.getTimezoneOffset() * 60000);
+            setStartDate(adjustedDate);
         };
         getInfo(id);
     },[1]);
+    const sendApi = async(data, id) =>{
+
+        await fetch(`http://localhost:3000/produtos/update/${id}`,{
+            method:"PUT",
+            headers:{
+                "Content-Type": "application/json",
+                "Authorization":sessionStorage.getItem("token"),
+            },
+            body: JSON.stringify(data),
+        });
+        window.location.href = `/produto/info/${id}`;
+    };
+
+    const handleForm = (event) =>{
+        event.preventDefault();
+
+        let formData =  new FormData(event.target);
+        let data = {};
+
+        for(let pair of formData.entries()){
+            data[pair[0]] = pair[1];
+        }
+        sendApi(data, id);
+    };
+
+    const handleChange = (date) => {
+        if (date instanceof Date && !isNaN(date))
+            setStartDate(date)
+    };
 
     const handlequantidade = (event) => {
         const novovalor = event.target.value;
@@ -93,15 +118,7 @@ const EditarProduto = ({tela, textButton}) =>{
         newarray[index] = {...newarray[index], local_id: novovalor};
         setData(newarray);
     };
-    
-    const handleValidade = (event) => {
-        const novovalor = event.target.value;
-        const index = 0;
-        const newarray = [...Data];
-        newarray[index] = {...newarray[index], dataDeValidade: novovalor};
-        setData(newarray);
-    };
-    
+        
     const handleCategoria = (event) => {
         const novovalor = event.target.value;
         const index = 0;
@@ -110,42 +127,24 @@ const EditarProduto = ({tela, textButton}) =>{
         setData(newarray);
     };
 
-    const sendApi = async(data, id) =>{
+    
+    // const AdicionarContador = ()=>{
+    //     setContador(Contador+1);
+    // }
+    
+    // const RemoverContador = ()=>{
+    //     if(Contador>0)
+    //         setContador(Contador-1);
+    //     else
+    //         setContador(Contador);
+    // }
 
-        await fetch(`http://localhost:3000/produtos/update/${id}`,{
-            method:"PUT",
-            headers:{
-                "Content-Type": "application/json",
-                "Authorization":sessionStorage.getItem("token"),
-            },
-            body: JSON.stringify(data),
-        });
-
-        // const apijson = await api.json();
-        // console.log(apijson);
-        window.location.href = `/produto/info/${id}`;
-        // return apijson;
-    }
-
-
-
-    const handleForm = (event) =>{
-        event.preventDefault();
-
-        let formData =  new FormData(event.target);
-        let data = {};
-
-        for(let pair of formData.entries()){
-            data[pair[0]] = pair[1];
-        }
-
-        sendApi(data, id);
-    }
 
     if(Data === null){
         return <div>Carregando</div>
+        // Data[0].dataDeValidade.slice(0,10)
     }
-    
+
     return(
 
         <div className="adicionar" >
@@ -171,9 +170,9 @@ const EditarProduto = ({tela, textButton}) =>{
                     <input type="text" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
                     {/* <span className="imgCampos"><img src={setaCima} width={45} alt="SetaCima"></img></span> */}
                     <div className="containerButtonsContadores">
-                        <button className="menos">-</button>
+                    <button type="button" className="menos">-</button>
                         <input type="text" className="contador" name="quantidade" required value={Data[0].quantidade} onChange={(e)=> {handlequantidade(e)}} /> 
-                        <button className="mais">+</button> 
+                        <button type="button" className="mais">+</button> 
                     </div>
                 </div>
 
@@ -188,7 +187,8 @@ const EditarProduto = ({tela, textButton}) =>{
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="dataDeValidade" className="InputAdicionarProdutos" required value={Data[0].dataDeValidade.slice(0,10)} onChange={(e)=> {handleValidade(e)}} placeholder="Data Validade"/>
+                <DatePicker required name="dataDeValidade" className="InputAdicionarProdutos" selected={startDate} onKeyDown={(e) => e.preventDefault()} onChange={(date) => {handleChange(date)}} dateFormat="yyyy-MM-dd" placeholderText="YYYY-MM-DD"/>
+                    {/* <input type="text" name="dataDeValidade" className="InputAdicionarProdutos" required value={Data[0].dataDeValidade.slice(0,10)} onChange={(e)=> {handleValidade(e)}} placeholder="Data Validade"/> */}
                     {/* <span className="imgCampos"><img src={calendario} width={45} alt="calendario"></img></span> */}
                 </div>
 
@@ -204,13 +204,13 @@ const EditarProduto = ({tela, textButton}) =>{
                 </div> 
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionarProdutos" value={Data[0].ImgProduto} onChange={(e)=> {handleImgProduto(e)}} placeholder="Imagem" />
+                    <input type="text" name="ImgProduto" className="InputAdicionarProdutos" value={Data[0].ImgProduto} onChange={(e)=> {handleImgProduto(e)}} placeholder="Imagem" />
                     {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
                 </div> 
 
                 
                 <div className="BtnsAdicionar">
-                    <Link to={`/produtos/${id}`} className="BtnCancelar">Cancelar</Link>
+                    <Link to={`/produtos/${Data[0].user_id}`} className="BtnCancelar">Cancelar</Link>
                     <button type='submit' className="BtnAdicionar">{textButton}</button>
                 </div>
                 </form>

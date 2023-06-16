@@ -1,4 +1,4 @@
-import Navbar from "../../layout/NavBar.js";
+import Navbar from "../../layout/NavBar/NavBar.js";
 import Container from "../../layout/Container.js";
 import './TelaInicial.css';
 import iconDespensa from "../../../img/iconDespensa.png";
