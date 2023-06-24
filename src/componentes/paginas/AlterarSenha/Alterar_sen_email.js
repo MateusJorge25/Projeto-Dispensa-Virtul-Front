@@ -61,7 +61,7 @@ function Alterar_sen() {
         </div>
 
         <div className="conteinerBox">
-            <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' />
+            <input type='email' className='inptEmailEsqueciSenha' name='email' placeholder='Insira seu email' />
         </div>
 
         <div className="conteinerBTN">
@@ -74,8 +74,8 @@ function Alterar_sen() {
             <img className="linhas" src={imgSeparacao} alt="Separação" width={75} height={2}></img>
         </div>
 
-        <div className="conteinerLink">
-            <Link className='conteinerLink' to='/cadastro' target='_black'> Criar nova conta</Link>
+        <div className="forgot">
+            <Link className='forgotlink' to='/cadastro' target='_black'> Criar nova conta</Link>
         </div>
 
         </form>

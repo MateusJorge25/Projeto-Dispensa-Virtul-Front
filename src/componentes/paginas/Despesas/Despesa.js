@@ -27,29 +27,29 @@ const Despesa = () => {
             return apijson;
         };
         sendApi(id);
-    },[])
+    },Data)
 
-    if (Data == null) {
+    if (Data === null) {
         return <div>Carregando...</div>;
-      }
+    }
     
 
     return (
         <div className="ContainerDespensaTela">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} width={35}/></Link>
+                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
                 <h1>Despensas</h1>
             </div>
             <Container containerMod='TelaProdutos'>  
-            { Data.length == 0 ? (
+            { Data.length === 0 ? (
                     <p className="NullProdutos">Você Não Possui Nenhuma Despensa Cadastrado</p>    
                 ):(
                 Data.map((Element) => {
                     return <CardDespesas key={Element.id} img={Element.img} nomeProduto={Element.nome} idDespensa={Element.id} idUser={Element.user_id} status={Element.status}/>
                 }))
             }
-            <Link to={`/despensa/adicionar/${id}`} className="BtnAdicionarCategoria"><img src={IconBtnAdicionar} width={45}/></Link>
+            <Link to={`/despensa/adicionar/${id}`} className="BtnAdicionarCategoria"><img src={IconBtnAdicionar} alt="Imagem Adicionar" width={45}/></Link>
                 
             </Container>
         </div>

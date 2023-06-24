@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
-import '../layout/Adicionar/Adicionar.css';
+import  "./Adicionar/Adicionar.css";
 import btnVoltar from "../../img/Botão de voltar.png";
 import btnsetaBaixo from "../../img/seta baixo.png";
 import { useState,useEffect } from "react";
@@ -21,7 +21,6 @@ const EditarDespensaComponent = ({tela, placeholderName, textButton, placeholder
             })
             const resApiJson = await resApi.json();
             setDespensa(resApiJson);
-            // console.log(resApiJson);
             return resApiJson;
         };
         getInfo(id);
@@ -36,11 +35,7 @@ const EditarDespensaComponent = ({tela, placeholderName, textButton, placeholder
             },
             body: JSON.stringify(data),
         });
-
-        // const apijson = await api.json();
-        // console.log(apijson);
         window.location.href = `/despensas/${Despensa[0].user_id}`;
-        // return apijson;
     }
 
     const handleForm = (event) =>{
@@ -86,8 +81,15 @@ const EditarDespensaComponent = ({tela, placeholderName, textButton, placeholder
                     <input type="text" name="nome" className="InputAdicionar" value={Despensa[0].nome} onChange={(e) => {handleNome(e)}} placeholder={placeholderName}/>    
                 </div>
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionar" value={Despensa[0].img} onChange={(e)=>{handleImg(e)}} placeholder={placeholderImg}/>
-                    <span><img src={btnsetaBaixo} width={45}></img></span>
+                    <select className="SelectInput" name="img" required >
+                        <option value={Despensa[0].img} disabled selected> {Despensa[0].img}</option>
+                        <option value="MaquinaDeLavar">Maquina De Lavar</option>
+                        <option value="ArmarioDeCozinha">Armario De Cozinha</option>
+                        <option value="Prateleira">Prateleira</option>
+                        <option value="Geladeira">Geladeira</option>
+                        <option value="TodosOsProdutos">Pilha de Produtos</option>
+                    </select>
+                    {/* <input type="text" name="img" className="InputAdicionar" value={Despensa[0].img} onChange={(e)=>{handleImg(e)}} placeholder={placeholderImg}/> */}
                 </div>
 
                 <div className="BtnsAdicionar">

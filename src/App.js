@@ -17,6 +17,8 @@ import Despesas from "./componentes/paginas/Despesas/Despesa";
 import RedefinirSenha from "./componentes/paginas/RedefSenha/RedefSenha";
 import TelaVerItem from "./componentes/paginas/TelaVerItem/TelaVerItem";
 import TotalCategorias from "./componentes/paginas/TelaCategoria/TotalCategorias";
+import TelaProdutosVencidos from "./componentes/paginas/TelaProdutosVencidos/TelaProdutosVencidos";
+import TelaProdutosAVencer from "./componentes/paginas/TelaProdutosAVencer/TelaProdutosAVencer";
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
           <Route path='/produtos/:id' element={<TotalProdutos/>}/>
           <Route path='/produto/info/:id' element={<TelaVerItem/>}/>
           <Route path='/categorias/:id' element={<TotalCategorias/>}/>
+          <Route path="/produtos/vencidos/:id" element={<TelaProdutosVencidos/>}/>
+          <Route path="/produtos/AVencer/:id" element={<TelaProdutosAVencer/>}/>
         </Routes>
       </Container>
     </BrowserRouter>

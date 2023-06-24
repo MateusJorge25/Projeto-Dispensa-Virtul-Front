@@ -6,7 +6,7 @@ import Geladeira from "../../img/Geladeira.png";
 import TodosOsProdutos from "../../img/Todos os Produtos.png";
 import tresPontinho from "../../img/tresPontinhos.png";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link,} from "react-router-dom";
 import iconEditar from "../../img/IconEditar.png";
 import iconDeletar from "../../img/IconDeletar.png";
 import iconStatusOn from "../../img/IconStatus.png";
@@ -15,7 +15,6 @@ import iconStatusOff from "../../img/iconStatusoff.png";
 const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
 
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-    const {id} = useParams();
 
     let imagem;
     switch (img) {
@@ -29,11 +28,11 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
         break;
         case "TodosOsProdutos": imagem = TodosOsProdutos;
         break;
-        default:
-            break;
+        default: imagem = "";
+        break;
     }
 
-    const handleAltStatus = async(e, idDespensa, idUser) => {
+    const handleAltStatus = async(e, idDespensa) => {
         e.preventDefault();
         try{
             const responseStatus = await fetch(`http://localhost:3000/local/update/status/${idDespensa}`,{
@@ -43,14 +42,13 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
                     "Authorization": sessionStorage.getItem("token"),
                 }
             })
-            window.location.href = `/despensas/${idUser}`;
             return responseStatus;
         }catch(error){
             console.log(error);
         }
     }
 
-    const handleDeleteDespensa = async(e, idDespensa, idUser) => {
+    const handleDeleteDespensa = async(e, idDespensa) => {
         e.preventDefault();
         try{
             const respondeDelete = await fetch(`http://localhost:3000/local/delete/${idDespensa}`,{
@@ -60,9 +58,6 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
                     "Authorization": sessionStorage.getItem("token"),
                 }
             });
-            
-            window.location.href = `/despensas/${idUser}`;
-            // console.log(respondeDelete)
             return respondeDelete;
         }catch(error){
             console.log(error);
@@ -73,7 +68,7 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
         setIsMenuVisible(!isMenuVisible);
     };
     let imgstatus;
-    if(status == 1){
+    if(status === 1){
         imgstatus = iconStatusOn;
     }else{
         imgstatus = iconStatusOff;
@@ -82,19 +77,21 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
 
     return (
         <div className="ContainerDespesas">
-            <div className="containerbtncartDespensa">
-                <button onClick={handleMenu} className="btnTresOpt"><img src={tresPontinho} width={30}/></button>
-                    {isMenuVisible &&(
-                        <ul className="ulDespensa">
-                            <li><button className="btnAltStatus" onClick={(e) => {handleAltStatus(e,idDespensa,idUser)}}><img src={imgstatus} width={20}/>Status</button></li>
-                            <li><Link to={`/despensa/editar/${idDespensa}`} className="LinkEditDespensa"><img src={iconEditar} width={20}/>Editar</Link></li>
-                            <li><button className="btnDelDespensa" onClick={(e) => {handleDeleteDespensa(e, idDespensa, idUser)}}><img src={iconDeletar} width={20}/>Excluir</button></li>
-                        </ul>
-                    )}
+            <div className="containerbtnMenu">
+                <button onClick={handleMenu} className="btnTresOpt"><img src={tresPontinho} alt="Opções Categoria" width={30}/></button>
             </div>
             <div className="nomeImagemDespensa">
-                <img className="imagemDoCardCategoria" src={imagem} width={70} />
+                <img className="imagemDoCardCategoria" src={imagem} alt="Imagem Categoria" width={70} />
                 <p className="nomeCategoria">{nomeProduto}</p> 
+            </div>
+            <div className="containerbtncartDespensa">
+                    {isMenuVisible &&(
+                        <ul className="ulDespensa">
+                            <li className="itemsMenu"><button className="btnAltStatus" onClick={(e) => {handleAltStatus(e,idDespensa)}}><img src={imgstatus} alt="Status" width={20}/>Status</button></li>
+                            <li className="itemsMenu"><Link to={`/despensa/editar/${idDespensa}`} className="LinkEditDespensa"><img src={iconEditar} width={20} alt="Editar Categoria" />Editar</Link></li>
+                            <li className="itemsMenu"><button className="btnDelDespensa" onClick={(e) => {handleDeleteDespensa(e, idDespensa)}}><img src={iconDeletar} width={20} alt="Excluir Categoria"/>Excluir</button></li>
+                        </ul>
+                    )}
             </div>
         </div>
     )

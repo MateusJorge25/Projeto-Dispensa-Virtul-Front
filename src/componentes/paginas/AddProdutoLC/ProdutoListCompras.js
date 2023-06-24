@@ -8,8 +8,8 @@ const ProdutoListCompras = () => {
     return (
 
         <div> 
-        <Container >
-            <NavBarProdutos />
+        <NavBarProdutos />
+        <Container>
             <AdiconarProdutos tela="Adiconar Produto na Lista de Compras" textButton="Adicionar"/>
         </Container>
         </div>

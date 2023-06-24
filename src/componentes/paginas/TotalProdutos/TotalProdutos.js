@@ -23,30 +23,30 @@ const TotalProdutos = () => {
             })
             const apijson = await date.json();
             setData(apijson);
-            console.log(apijson);
             return apijson;
         };
         sendApi(id);
-    },[])
+    },Data)
 
     return (
         <div className="ContainerTotalProdutos">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} width={35}/></Link>
+                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
                 <h1>Total de Produtos</h1>
             </div>
             <Container containerMod='TelaProdutos'>  
             { 
-                Data.length == 0 ? (
+                Data.length === 0 ? (
                     <p className="NullProdutos">Você Não Possui Nenhum Produto Cadastrado</p>    
                 ):(
                     Data.map((Element) => {
-                    return <CardProdutos key={Element.IdProdutos} img={Element.ImgProduto} nomeProduto={Element.NomeProduto} quantidade={Element.quantidade} despensa={Element.NomeDespensa} validade={Element.dataDeValidade.slice(0,10)} imgDespensa={Element.ImgDespensa} idProduto={Element.IdProdutos}/>
+                    return <CardProdutos key={Element.IdProdutos} img={Element.ImgProduto} nomeProduto={Element.NomeProduto} quantidade={Element.quantidade}
+                    despensa={Element.NomeDespensa} validade={Element.dataDeValidade.slice(0,10)} imgDespensa={Element.ImgDespensa} idProduto={Element.IdProdutos}/>
                 })
                 )
             }
-            <Link to={`/produto/adicionar/${id}`} className="BtnAdicionarProduto"><img src={IconBtnAdicionar} width={45}/></Link>
+            <Link to={`/produto/adicionar/${id}`} className="BtnAdicionarProduto"><img src={IconBtnAdicionar} alt="Imagem Adicionar" width={45}/></Link>
             </Container>
         </div>
     )

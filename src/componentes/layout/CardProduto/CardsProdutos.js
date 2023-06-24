@@ -42,14 +42,14 @@ switch (img) {
     return (
         <div className="ContainerCardProdutos">
             <div className="nomeImagemProduto">
-                <img className="imagemDoCard" src={imagemProduto} width={70} />
+                <img className="imagemDoCard" src={imagemProduto} alt="Imagem produto" width={70} />
                 <h1 className="nomeProduto">{nomeProduto}</h1>
             </div>
             <div className="InformacoesProdutos">
-                <Link to ={`/produto/info/${idProduto}`} className="Btncard"><img src={SetaDireita} width={25}/></Link>
+                <Link to ={`/produto/info/${idProduto}`} className="Btncard"><img src={SetaDireita} alt="Imagem Seta para a direita" width={25}/></Link>
                 <div className="containerInformacoes"><span className="NumeroQuantidade">{quantidade}</span><h1 className="H1Card">Unidade</h1></div>
-                <div className="containerInformacoes"><img src={imagemDespensa} width={25}></img><h1 className="H1Card">{despensa}</h1></div>
-                <div className="containerInformacoes"><img src={IconValidade} width={25}></img><h1 className="H1Card">{validade}</h1></div>
+                <div className="containerInformacoes"><img src={imagemDespensa} alt="Imagem Depensa" width={25}></img><h1 className="H1Card">{despensa}</h1></div>
+                <div className="containerInformacoes"><img src={IconValidade} alt="Imagem Validade" width={25}></img><h1 className="H1Card">{validade}</h1></div>
             </div>
         </div>
     )

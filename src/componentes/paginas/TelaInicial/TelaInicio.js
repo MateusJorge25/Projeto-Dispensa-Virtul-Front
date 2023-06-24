@@ -67,7 +67,7 @@ function Menu (){
                         <h1 className="titleCard">Itens a Vencer</h1>
                     </div>
                     <div className="BtnCardSeta">
-                        <Link to={`/itensavencer`}><img src={iconSetaCards} /></Link>
+                        <Link to={`/produtos/AVencer/${id}`}><img src={iconSetaCards} /></Link>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ function Menu (){
                         <h1 className="titleCard">Itens Vencidos</h1>
                     </div>
                     <div className="BtnCardSeta">
-                        <Link to={`/itensvencidos`}><img src={iconSetaCards} /></Link>
+                        <Link to={`/produtos/vencidos/${id}`}><img src={iconSetaCards} /></Link>
                     </div>
                 </div>
                 </div>

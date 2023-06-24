@@ -9,6 +9,7 @@ function Login () {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
     const [FiqueConectado, setFiqueConectado] = useState("");
+    const [Data, setData] = useState([]);
 
     const handleEmail = (event) => {
         setEmail(event.target.value);
@@ -27,6 +28,7 @@ function Login () {
         })
 
         const apijson = await api.json();
+        setData(apijson);
 
         sessionStorage.setItem("token",`${apijson.token}`);
 
@@ -66,10 +68,11 @@ function Login () {
 
                 <div className='top'>
                     <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required value={email} onChange={(e) => {handleEmail(e)}}/>
+
                 </div>
 
                 <div className='mid'>
-                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Inserir sua senha' required value={password} onChange={(e) => {handlePassword(e)}}/>
+                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Insira sua senha' required value={password} onChange={(e) => {handlePassword(e)}}/>
                 </div>
 
                 <div className='connected'>

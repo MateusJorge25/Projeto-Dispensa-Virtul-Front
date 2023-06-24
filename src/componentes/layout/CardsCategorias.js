@@ -1,7 +1,7 @@
 import "../layout/CardDespensa.css";
 import tresPontinho from "../../img/tresPontinhos.png";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import iconEditar from "../../img/IconEditar.png";
 import iconDeletar from "../../img/IconDeletar.png";
 import Bebidas from "../../img/Bebidas.png";
@@ -31,9 +31,6 @@ const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
                     "Authorization": sessionStorage.getItem("token"),
                 }
             });
-            
-            window.location.href = `/categorias/${idUser}`;
-            // console.log(respondeDelete)
             return respondeDelete;
         }catch(error){
             console.log(error);
@@ -47,17 +44,19 @@ const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
     
     return (
         <div className="ContainerDespesas">
+             <div className="containerbtnMenu">
+                <button onClick={handleMenu} className="btnTresOpt"><img src={tresPontinho} alt="Opções da Categoria" width={30}/></button>
+            </div>
             <div className="containerbtncartDespensa">
-                <button onClick={handleMenu} className="btnTresOpt"><img src={tresPontinho} width={30}/></button>
                     {isMenuVisible &&(
                         <ul className="ulDespensa">
-                            <li><Link to={`/categoria/editar/${idCategoria}`} className="LinkEditDespensa"><img src={iconEditar} width={20}/>Editar</Link></li>
-                            <li><button className="btnDelDespensa" onClick={(e) => {handleDeleteCategoria(e, idCategoria, idUser)}}><img src={iconDeletar} width={20}/>Excluir</button></li>
+                            <li className="itemsMenu"><Link to={`/categoria/editar/${idCategoria}`} className="LinkEditDespensa"><img src={iconEditar} alt="Imagem Editar" width={20}/>Editar</Link></li>
+                            <li className="itemsMenu"><button className="btnDelDespensa" onClick={(e) => {handleDeleteCategoria(e, idCategoria, idUser)}}><img src={iconDeletar} alt="Imagem Excluir" width={20}/>Excluir</button></li>
                         </ul>
                     )}
             </div>
             <div className="nomeImagemDespensa">
-                <img className="imagemDoCardCategoria" src={imagem} width={70} />
+                <img className="imagemDoCardCategoria" src={imagem} alt="Imagem Categoria" width={70} />
                 <h1 className="nomeCategoria">{nome}</h1> 
             </div>
         </div>

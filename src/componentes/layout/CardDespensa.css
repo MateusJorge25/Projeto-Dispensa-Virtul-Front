@@ -25,32 +25,49 @@
     flex-direction: column;
 }
 .btnTresOpt{
-    margin-left: 9rem; 
-    padding-right: 2rem;
     margin-top: 0.3rem;
+    padding-right: 1rem;
     border: none;
     background-color: transparent;  
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    position: static;
+    
+
 }
-.containerbtncartDespensa{
+.containerbtnMenu{
     display: flex;
     justify-content: right;
     align-items: center;
     margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.containerbtncartDespensa{
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    position: fixed;
 }
 .ulDespensa{
-    padding: 10px;
-    position: absolute;
-    left: 15rem;
-    top: 10rem; 
     list-style: none;
-    background-color:  rgba(70, 236, 156, 0.2);
-    width: 8rem;
-    height: 7rem;
-    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(70, 236, 156, 1);
+    padding: 5px;
+    position: relative;
+    left: 11rem;
+}
+.itemsMenu{
+    display: flex;
+    gap:3px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.itemsMenu:hover{
+    background-color:rgba(57, 196, 129, 1);
+    border-radius: 10px;
 }
 .btnAltStatus{
     background-color: transparent;
@@ -70,4 +87,5 @@
     font-size: 1rem;
     margin: 0.5rem;
 }
+  
 

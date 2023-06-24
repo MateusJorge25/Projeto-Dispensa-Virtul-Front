@@ -35,7 +35,7 @@ const ListaC = () =>{
         <div className="ContainerListaC">
                 <Navbar />
             <div className="BarravoltarListaC">  
-                <Link to={`/home/${id}`}><img src={btnVoltar} width={35} alt="BotãoVoltar"/></Link>
+                <Link to={`/home/${id}`}><img src={btnVoltar} width={35}></img></Link>
                 <h1>Lista de Compras</h1>
             </div>
                 <Container containerMod='TelaProdutos'>

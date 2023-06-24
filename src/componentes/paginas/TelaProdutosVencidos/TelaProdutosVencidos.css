@@ -1,0 +1,12 @@
+.ContainerProdutosVencidos{
+    width: 100%;
+    height: 100%;
+}
+.btnVoltar{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btnVoltar:hover{
+    filter: brightness(97%);
+}

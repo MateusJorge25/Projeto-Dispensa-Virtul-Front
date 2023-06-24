@@ -45,7 +45,7 @@ const AdicionarCategoria = ({tela, placeholderName, textButton, placeholderImg})
         <div className="adicionar" >
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
-                    <Link to={`/categorias/${id}`}><img src={btnVoltar} width={45}/></Link>
+                    <Link to={`/categorias/${id}`}><img src={btnVoltar} width={35}/></Link>
                     <h1>{tela}</h1>
                 </div>
                 <form onSubmit={handleForm}>

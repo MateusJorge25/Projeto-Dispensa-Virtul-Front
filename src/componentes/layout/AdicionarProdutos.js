@@ -52,7 +52,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
         }
         ApiFetchDespensa(id);
         ApiFetchCategoria(id);
-    },[])
+    },[Categoria, Despensa])
 
     const sendApi = async(data, id) =>{
 
@@ -95,6 +95,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
     const AdicionarContador = ()=>{
         setContador(Contador+1);
     }
+
     const RemoverContador = ()=>{
         if(Contador>0)
             setContador(Contador-1);
@@ -111,25 +112,23 @@ const AdicionarProdutos = ({tela, textButton}) =>{
     return(
 
         <div className="adicionar" >
-        
+              
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
                     <Link to={`/produtos/${id}`}><img src={btnVoltar} width={45} alt="BotãoVoltar"/></Link>    
                     <h1>{tela}</h1>
-                </div>
+                </div>  
                 <form onSubmit={handleForm}>
                 <div className="ContainerInputAdicionar">
                     <input type="text" name="nome" className="InputAdicionarProdutos" required placeholder="Nome"/>
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="lote" className="InputAdicionarProdutos" required placeholder="Lote"/>
-                    {/* <span className="imgCampos"><img src={caixa} width={45} alt="caixa"></img></span>    */}
+                    <input type="text" name="lote" className="InputAdicionarProdutos" placeholder="Lote"/>
                 </div>
                 
                 <div className="ContainerInputAdicionar">
                     <input type="text" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
-                    {/* <span className="imgCampos"><img src={setaCima} width={45} alt="SetaCima"></img></span> */}
                     <div className="containerButtonsContadores">
                         <button onClick={RemoverContador} className="menos">-</button>
                         <input type="number" className="contador" name="quantidade" required value={Contador} onChange={(e)=> {handleContador(e)}} placeholder="0" /> 
@@ -138,36 +137,30 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    {/* <span className="imgCampos"><img src={armario} width={45} alt="armario"></img></span> */}
-                    <input type="text" name="marca" className="InputAdicionarProdutos" required placeholder="Marca"/>
+                    <input type="text" name="marca" className="InputAdicionarProdutos" placeholder="Marca"/>
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="unidade" className="InputAdicionarProdutos" required placeholder="Unidade(s)"/>
-                    {/* <span className="imgCampos"><img src={balança} width={45} alt="balança"></img></span> */}
+                    <input type="text" name="unidade" className="InputAdicionarProdutos" placeholder="Unidade(s)"/>
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <DatePicker required name="dataDeValidade" className="InputAdicionarProdutos" selected={startDate} onKeyDown={(e) => e.preventDefault()} onChange={(date) => handleChange(date)} dateFormat="yyyy-MM-dd" placeholderText="YYYY-MM-DD"/>
-                    {/* <input type="date" pattern="\d{4}/\d{1,2}/\d{1,2}" name="dataDeValidade" className="InputAdicionarProdutos" required placeholder="Data Validade"/> */}
-                    {/* <span className="imgCampos"><img src={calendario} width={45} alt="calendario"></img></span> */}
+                    <DatePicker name="dataDeValidade" className="InputAdicionarProdutos" selected={startDate} onKeyDown={(e) => e.preventDefault()} onChange={(date) => handleChange(date)} dateFormat="yyyy-MM-dd" placeholderText="YYYY-MM-DD"/>
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                <select type="text" name="local_id" className="SelectInput" required>
-                      <option value="" disabled selected>Selecione uma Despensa</option> 
-                      {
-                        Despensa.map((element)=>{
-                            return <option value={element.id}>{element.nome ?? element.message}</option>  
-                        })
-                      }
-                </select>
-                    {/* <span className="imgCampos"><img src={despesas} width={45} alt="despensas"></img></span> */}
+                    <select type="text" name="local_id" className="SelectInput">
+                        <option value="" disabled selected>Selecione uma Despensa</option> 
+                        {
+                            Despensa.map((element)=>{
+                                return <option value={element.id}>{element.nome ?? element.message}</option>  
+                            })
+                        }
+                    </select>
                 </div>
 
-
                 <div className="ContainerInputAdicionar">
-                    <select name="categoria_id" className="SelectInput" required>
+                    <select name="categoria_id" className="SelectInput">
                         <option value="" disabled selected>Selecione uma Categoria</option>  
                         {
                             Categoria.map((element)=>{
@@ -175,20 +168,17 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                             })
                         }     
                     </select>
-                    {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
                 </div> 
 
                 <div className="ContainerInputAdicionar">
-                    <select name="ImgProduto" className="InputAdicionarProdutos">
+                    <select name="ImgProduto" className="InputAdicionarProdutos" required>
                         <option value="" disabled selected>Selecione uma Imagem</option> 
                         <option value="Yogurt">Yogurt</option> 
                         <option value="Leite">Leite</option> 
                         <option value="SucoDeLaranja">Suco De Laranja</option> 
                     </select>
-                    {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
                 </div> 
 
-                
                 <div className="BtnsAdicionar">
                     <Link to={`/produtos/${id}`} className="BtnCancelar">Cancelar</Link>
                     <button type='submit' className="BtnAdicionar">{textButton}</button>

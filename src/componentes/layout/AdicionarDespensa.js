@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
 import '../layout/Adicionar/Adicionar.css';
 import btnVoltar from "../../img/Botão de voltar.png";
-import btnsetaBaixo from "../../img/seta baixo.png";
 
 const AdicionarDespensa = ({tela, placeholderName, textButton, placeholderImg}) =>{
 
@@ -38,7 +37,7 @@ const AdicionarDespensa = ({tela, placeholderName, textButton, placeholderImg}) 
         <div className="adicionar" >
             <Container containerMod="telaAdicionar">
                 <div className="Barravoltar">
-                    <Link to={`/despensas/${id}`}><img src={btnVoltar} width={45}/></Link>
+                    <Link to={`/despensas/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={45}/></Link>
                     <h1>{tela}</h1>
                 </div>
                 <form onSubmit={handleForm}>
@@ -46,8 +45,14 @@ const AdicionarDespensa = ({tela, placeholderName, textButton, placeholderImg}) 
                     <input type="text" name="nome" className="InputAdicionar" placeholder={placeholderName}/>    
                 </div>
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionar" placeholder={placeholderImg}/>
-                    <span><img src={btnsetaBaixo} width={45}></img></span>
+                    <select name="img" className="SelectInput" required>
+                        <option value="" disabled selected>Selecionar um icone</option>
+                        <option value="MaquinaDeLavar">Maquina De Lavar</option>
+                        <option value="ArmarioDeCozinha">Armario De Cozinha</option>
+                        <option value="Prateleira">Prateleira</option>
+                        <option value="Geladeira">Geladeira</option>
+                        <option value="TodosOsProdutos">Todos Os Produtos</option>
+                    </select>
                 </div>
 
                 <div className="BtnsAdicionar">

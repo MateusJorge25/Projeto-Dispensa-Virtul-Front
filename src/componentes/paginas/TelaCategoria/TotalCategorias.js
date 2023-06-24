@@ -27,7 +27,7 @@ const TotalCategorias = () => {
             return apijson;
         };
         sendApi(id);
-    },[])
+    },Data)
 
     if(Data === null){
         return <div>Carregando...</div>
@@ -38,12 +38,12 @@ const TotalCategorias = () => {
         <div className="ContainerTotalProdutos">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} width={35}/></Link>
+                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Botão Voltar" width={35}/></Link>
                 <h1>Total as Categorias</h1>
             </div>
             <Container containerMod='TelaProdutos'>  
             { 
-                Data.length == 0 ? (
+                Data.length === 0 ? (
                     <p className="NullProdutos">Você Não Possui Nenhum Categoria Cadastrado</p>    
                 ):(
                     Data.map((Element) => {
@@ -51,7 +51,7 @@ const TotalCategorias = () => {
                 })
                 )
             }
-            <Link to={`/categoria/adicionar/${id}`} className="BtnAdicionarProduto"><img src={IconBtnAdicionar} width={45}/></Link>
+            <Link to={`/categoria/adicionar/${id}`} className="BtnAdicionarProduto"><img src={IconBtnAdicionar} alt="Imagem Adicionar" width={45}/></Link>
             </Container>
         </div>
     )
