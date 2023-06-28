@@ -2,13 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import Container from "./Container";
 import './AdicionarProdutos.css';
 import btnVoltar from "../../img/Botão de voltar.png";
-import caixa from "../../img/caixa.png";
-import setaCima from "../../img/iconQuantidade.png";
-import armario from "../../img/Prateleira.png";
-import balança from "../../img/balança.png";
-import calendario from "../../img/calendario.png";
-import despesas from "../../img/despesas.png";
-import bebidas from "../../img/Bebidas.png";
 import { useState } from 'react'
 
 
@@ -17,12 +10,7 @@ const AdicionarProdutos = ({tela, textButton}) =>{
 
 
     const { id } = useParams();
-    const [Contador, setContador] = useState("0");
-
-
-    const handleContador = (event) => {
-        setContador(event.target.value);
-    };
+    const [Contador, setContador] = useState(null);
 
     const sendApi = async(data, id) =>{
 
@@ -55,6 +43,30 @@ const AdicionarProdutos = ({tela, textButton}) =>{
 
         sendApi(data, id);
     }
+
+    const handleContador = (event) => {
+        if(event.target.value >= 100){
+            setContador(100);
+        }else if(event.target.value < 0){
+            setContador(0);
+        }else{
+            setContador(event.target.value);
+        }
+    };
+
+    const AdicionarContador = ()=>{
+        if(Contador >= 100)
+            setContador(100)
+        else
+            setContador(Contador+1);
+    }
+
+    const RemoverContador = ()=>{
+        if(Contador>0)
+            setContador(Contador-1);
+        else
+            setContador(Contador);
+    }
     
     return(
 
@@ -71,27 +83,25 @@ const AdicionarProdutos = ({tela, textButton}) =>{
                 
                 <div className="ContainerInputAdicionar">
                     <input type="text" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
-                    {/* <span className="imgCampos"><img src={setaCima} width={45} alt="SetaCima"></img></span> */}
                     <div className="containerButtonsContadores">
-                        <button className="menos">-</button>
-                        <input type="text" className="contador" name="quantidade"required value={Contador} onChange={(e)=> {handleContador(e)}} /> 
-                        <button className="mais">+</button> 
+                        <button className="menos" onClick={RemoverContador}>-</button>
+                        <input type="number" className="contador" name="quantidade" required value={Contador} onChange={(e)=> {handleContador(e)}} placeholder="0"/> 
+                        <button className="mais" onClick={AdicionarContador}>+</button> 
                     </div>
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    {/* <span className="imgCampos"><img src={armario} width={45} alt="armario"></img></span> */}
                     <input type="text" name="marca" className="InputAdicionarProdutos" placeholder="Marca"/>
                 </div>
 
-                {/* <div className="ContainerInputAdicionar">
-                    <input type="text" name="categoria_id" className="InputAdicionarProdutos" required placeholder="Categoria" />
-                    <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span> 
-                </div>  */}
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="img" className="InputAdicionarProdutos" required placeholder="Imagem" />
-                    {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
+                <select name="img" className="InputAdicionarProdutos" required>
+                        <option value="" disabled selected>Selecione uma Imagem</option> 
+                        <option value="Yogurt">Yogurt</option> 
+                        <option value="Leite">Leite</option> 
+                        <option value="SucoDeLaranja">Suco De Laranja</option> 
+                    </select>
                 </div> 
 
                 

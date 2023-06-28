@@ -14,6 +14,7 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .TelaProdutos{
     padding: 1.5rem 0 0 1.5rem;
     background-color: #fff;
@@ -31,6 +32,15 @@
 
 .min-height{
  min-height: 75%;
+}
+.TelaLoginRegister{
+    background-color: rgba(70, 236, 156, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
 }
 
 .start {

@@ -10,6 +10,8 @@ const EditarProduto = ({tela, textButton}) =>{
 
     const { id } = useParams();
     const [Data, setData] = useState(null);
+    const [Categoria, setCategoria] = useState([]);
+    const [Despensa, setDespensa] = useState([]);
     const [startDate, setStartDate] = useState(null);
     
 
@@ -31,6 +33,33 @@ const EditarProduto = ({tela, textButton}) =>{
             const adjustedDate = new Date(dateObj.getTime() + dateObj.getTimezoneOffset() * 60000);
             setStartDate(adjustedDate);
         };
+        const ApiFetchCategoria = async (id) =>{
+            const ResponseApiCategoria = await fetch(`http://localhost:3000/categorias/${id}`,{
+                method:"GET",
+                headers:{
+                    "Content-Type": "application/json",
+                    "Authorization": sessionStorage.getItem("token"),
+                },
+            })
+            const ResApiJson = await ResponseApiCategoria.json();
+            console.log(ResApiJson);
+            setCategoria(ResApiJson);
+        }
+
+        const ApiFetchDespensa = async (id) =>{
+            const ResponseApiDespensa = await fetch(`http://localhost:3000/local/despensaOn/${id}`,{
+                method:"GET",
+                headers:{
+                    "Content-Type": "application/json",
+                    "Authorization": sessionStorage.getItem("token"),
+                },
+            })
+            const ResApiJson = await ResponseApiDespensa.json();
+            console.log(ResApiJson);
+            setDespensa(ResApiJson);
+        }
+        ApiFetchDespensa(id);
+        ApiFetchCategoria(id);
         getInfo(id);
     },[1]);
     const sendApi = async(data, id) =>{
@@ -103,46 +132,54 @@ const EditarProduto = ({tela, textButton}) =>{
         setData(newarray);
     };
     
-    const handleImgProduto = (event) => {
-        const novovalor = event.target.value;
-        const index = 0;
-        const newarray = [...Data];
-        newarray[index] = {...newarray[index], ImgProduto: novovalor};
-        setData(newarray);
-    };
+    // const handleImgProduto = (event) => {
+    //     const novovalor = event.target.value;
+    //     const index = 0;
+    //     const newarray = [...Data];
+    //     newarray[index] = {...newarray[index], ImgProduto: novovalor};
+    //     setData(newarray);
+    // };
     
-    const handleLocal = (event) => {
-        const novovalor = event.target.value;
-        const index = 0;
-        const newarray = [...Data];
-        newarray[index] = {...newarray[index], local_id: novovalor};
-        setData(newarray);
-    };
+    // const handleLocal = (event) => {
+    //     const novovalor = event.target.value;
+    //     const index = 0;
+    //     const newarray = [...Data];
+    //     newarray[index] = {...newarray[index], local_id: novovalor};
+    //     setData(newarray);
+    // };
         
-    const handleCategoria = (event) => {
-        const novovalor = event.target.value;
-        const index = 0;
-        const newarray = [...Data];
-        newarray[index] = {...newarray[index], categoria_id: novovalor};
-        setData(newarray);
-    };
+    // const handleCategoria = (event) => {
+    //     const novovalor = event.target.value;
+    //     const index = 0;
+    //     const newarray = [...Data];
+    //     newarray[index] = {...newarray[index], categoria_id: novovalor};
+    //     setData(newarray);
+    // };
 
     
-    // const AdicionarContador = ()=>{
-    //     setContador(Contador+1);
-    // }
+    const AdicionarContador = ()=>{
+        if(Data[0].quantidade<=100){
+            const novovalor = Data[0].quantidade+1;
+            const index = 0;
+            const newarray = [...Data];
+            newarray[index] = {...newarray[index], quantidade: novovalor};
+            setData(newarray);
+        }
+    }
     
-    // const RemoverContador = ()=>{
-    //     if(Contador>0)
-    //         setContador(Contador-1);
-    //     else
-    //         setContador(Contador);
-    // }
+    const RemoverContador = ()=>{
+        if(Data[0].quantidade>0){
+            const novovalor = Data[0].quantidade-1;
+            const index = 0;
+            const newarray = [...Data];
+            newarray[index] = {...newarray[index], quantidade: novovalor};
+            setData(newarray);
+        }
+    }
 
 
     if(Data === null){
         return <div>Carregando</div>
-        // Data[0].dataDeValidade.slice(0,10)
     }
 
     return(
@@ -170,9 +207,9 @@ const EditarProduto = ({tela, textButton}) =>{
                     <input type="text" className="InputAdicionarProdutos" placeholder="Quantidade" disabled />
                     {/* <span className="imgCampos"><img src={setaCima} width={45} alt="SetaCima"></img></span> */}
                     <div className="containerButtonsContadores">
-                    <button type="button" className="menos">-</button>
+                    <button type="button" className="menos" onClick={RemoverContador}>-</button>
                         <input type="text" className="contador" name="quantidade" required value={Data[0].quantidade} onChange={(e)=> {handlequantidade(e)}} /> 
-                        <button type="button" className="mais">+</button> 
+                        <button type="button" className="mais" onClick={AdicionarContador}>+</button> 
                     </div>
                 </div>
 
@@ -193,18 +230,39 @@ const EditarProduto = ({tela, textButton}) =>{
                 </div>
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="local_id" className="InputAdicionarProdutos" required value={Data[0].local_id} onChange={(e)=> {handleLocal(e)}} placeholder="Despensa"/>
+                    <select type="text" name="local_id" className="SelectInput">
+                        <option value={Data[0].local_id ?? ""} disabled selected>{Data[0].NomeDespensa ?? "Selecione Uma Despensa"}</option> 
+                        {
+                            Despensa.map((element)=>{
+                                return <option value={element.id}>{element.nome ?? element.message}</option>  
+                            })
+                        }
+                    </select>
+                    {/* <input type="text" name="local_id" className="InputAdicionarProdutos" required value={Data[0].local_id} onChange={(e)=> {handleLocal(e)}} placeholder="Despensa"/> */}
                     {/* <span className="imgCampos"><img src={despesas} width={45} alt="despensas"></img></span> */}
                 </div>
 
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="categoria_id" className="InputAdicionarProdutos" required value={Data[0].categoria_id} onChange={(e)=> {handleCategoria(e)}} placeholder="Bebidas" />
-                    {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
+                    {/* <input type="text" name="categoria_id" className="InputAdicionarProdutos" required value={Data[0].categoria_id} onChange={(e)=> {handleCategoria(e)}} placeholder="Bebidas" /> */}
+                    <select name="categoria_id" className="SelectInput">
+                        <option value={Data[0].categoria_id ?? ""} disabled selected>{Data[0].categoria_id ?? "Selecione Uma Categoria"}</option>  
+                        {
+                            Categoria.map((element)=>{
+                                return <option value={element.id}>{element.nome ?? element.message}</option>  
+                            })
+                        }     
+                    </select>
                 </div> 
 
                 <div className="ContainerInputAdicionar">
-                    <input type="text" name="ImgProduto" className="InputAdicionarProdutos" value={Data[0].ImgProduto} onChange={(e)=> {handleImgProduto(e)}} placeholder="Imagem" />
+                    <select name="ImgProduto" className="InputAdicionarProdutos" required>
+                        <option value="" disabled selected>Selecione uma Imagem</option> 
+                        <option value="Yogurt">Yogurt</option> 
+                        <option value="Leite">Leite</option> 
+                        <option value="SucoDeLaranja">Suco De Laranja</option> 
+                    </select>
+                    {/* <input type="text" name="ImgProduto" className="InputAdicionarProdutos" value={Data[0].ImgProduto} onChange={(e)=> {handleImgProduto(e)}} placeholder="Imagem" /> */}
                     {/* <span className="imgCampos"><img src={bebidas} width={45} alt="bebidas"></img></span>  */}
                 </div> 
 

@@ -58,7 +58,7 @@ const Cadastro = () =>{
     }
 
 return (
-    <Container>
+    <Container containerMod="TelaLoginRegister">
     <div className='Container'>
         <form onSubmit={handleForm}> 
         <div className='imgContainer'>

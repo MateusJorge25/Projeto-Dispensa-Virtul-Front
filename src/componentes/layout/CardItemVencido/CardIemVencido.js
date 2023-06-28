@@ -9,6 +9,7 @@ import CaideDeSucoDeLaranja from "../../../img/CaixaDeSucoDeLaranja.png";
 import PoteDeYogurt from "../../../img/PoteDeYogurt.png";
 import tresPontinho from "../../../img/tresPontinhos.png";
 import iconDeletar from "../../../img/IconDeletar.png";
+import iconTodosProdutos from "../../../img/Todos os Produtos.png"
 import { useState } from "react";
 
 const CardItemVencido = ({img ,nomeProduto,quantidade, despensa, validade, imgDespensa,idProduto}) => {
@@ -28,7 +29,7 @@ const CardItemVencido = ({img ,nomeProduto,quantidade, despensa, validade, imgDe
         break;
         case "TodosOsProdutos": imagemDespensa = TodosOsProdutos;
         break;
-        default:
+        default: imagemDespensa = TodosOsProdutos;
             break;
     }
     let imagemProduto;
@@ -39,7 +40,7 @@ const CardItemVencido = ({img ,nomeProduto,quantidade, despensa, validade, imgDe
         break;
         case "SucoDeLaranja": imagemProduto = CaideDeSucoDeLaranja;
         break;
-        default:
+        default: imagemProduto = TodosOsProdutos
             break;
     }
 
@@ -62,6 +63,15 @@ const CardItemVencido = ({img ,nomeProduto,quantidade, despensa, validade, imgDe
 
         }
     }
+
+    
+    if(validade != null)
+        validade = validade.slice(0,10)
+    else
+        validade = "Data de validade não informada";
+
+    if (despensa == null)
+        despensa = "Despensa não informada";
 
         return (
             <div className="ContainerCardProdutos">

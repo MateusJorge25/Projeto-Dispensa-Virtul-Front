@@ -1,7 +1,7 @@
 import Navbar from "../../layout/NavBar/NavBar";
 import Container from "../../layout/Container";
 import { Link, useParams } from "react-router-dom";
-import "./Despesa.css";
+import "./Despensa.css";
 import { useEffect, useState } from "react";
 import CardDespesas from "../../layout/CardsDespensas";
 import btnVoltar from "../../../img/Botão de voltar.png"
@@ -11,7 +11,7 @@ import IconBtnAdicionar from "../../../img/BotãoAdicionar.png"
 const Despesa = () => {
 
     const{ id } = useParams();
-    const [Data, setData] = useState(null);
+    const [Data, setData] = useState([]);
 
     useEffect(()=>{
         const sendApi = async (id) =>{
@@ -23,14 +23,13 @@ const Despesa = () => {
             })
             const apijson = await date.json();
             setData(apijson);
-            console.log(apijson);
             return apijson;
         };
         sendApi(id);
-    },Data)
+    },[Data])
 
-    if (Data === null) {
-        return <div>Carregando...</div>;
+    if (Data.length === 0) {
+        return (<Container containerMod='TelaProdutos'> <div className="NullProdutos">Carregando...</div> </Container>)
     }
     
 
@@ -38,11 +37,11 @@ const Despesa = () => {
         <div className="ContainerDespensaTela">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
+                <Link className="LinkBtnVoltar" to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
                 <h1>Despensas</h1>
             </div>
             <Container containerMod='TelaProdutos'>  
-            { Data.length === 0 ? (
+            { Data.length === 0 || Data[0].hasOwnProperty("message")?(
                     <p className="NullProdutos">Você Não Possui Nenhuma Despensa Cadastrado</p>    
                 ):(
                 Data.map((Element) => {

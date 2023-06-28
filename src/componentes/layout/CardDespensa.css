@@ -25,15 +25,17 @@
     flex-direction: column;
 }
 .btnTresOpt{
-    margin-top: 0.3rem;
-    padding-right: 1rem;
+    padding: 0.1rem;
+    margin-right: 0.9rem;
+    border-radius: 50%;
     border: none;
-    background-color: transparent;  
+    background-color: #fff;  
     display: flex;
     justify-content: right;
     align-items: center;
-    
-
+}
+.btnTresOpt:hover{
+    filter: brightness(85%);   
 }
 .containerbtnMenu{
     display: flex;
@@ -87,5 +89,5 @@
     font-size: 1rem;
     margin: 0.5rem;
 }
-  
+
 

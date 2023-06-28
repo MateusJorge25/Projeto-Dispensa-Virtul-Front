@@ -54,40 +54,40 @@ function Login () {
 
 
     return (
-    <Container customClass='.min-height'>
-        <div className='Container'>
-            <form className='formTelaLogin' onSubmit={handleSubmit}>  
-            <div className='containerImg'>
-                <img src={img} width={100}/>
-            </div>  
+        <Container customClass='min-height' containerMod="TelaLoginRegister">
+            <div className='Container'>
+                <form className='formTelaLogin' onSubmit={handleSubmit}>  
+                <div className='containerImg'>
+                    <img src={img} width={100}/>
+                </div>  
 
-            <div className='Seletores'>
-                <Link className= "entrar select" to='/'>Entrar</Link>
-                <Link className= "cadastrar" to='/cadastro'>Cadastro</Link>
+                <div className='Seletores'>
+                    <Link className= "entrar select" to='/'>Entrar</Link>
+                    <Link className= "cadastrar" to='/cadastro'>Cadastro</Link>
+                </div>
+
+                    <div className='top'>
+                        <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required value={email} onChange={(e) => {handleEmail(e)}}/>
+
+                    </div>
+
+                    <div className='mid'>
+                        <input type='password' className='inptEmailPassword' name='senha' placeholder='Insira sua senha' required value={password} onChange={(e) => {handlePassword(e)}}/>
+                    </div>
+
+                    <div className='connected'>
+                        <input type='checkbox' id='FiqueConectado' name='Fique Conectado' checked={FiqueConectado} onChange={(e) => setFiqueConectado(e.target.checked)} /> 
+                        <label htmlFor='FiqueConectado' className='labelFiqueConectado'>Fique Conectado</label>   
+                    </div>
+                    <div className='campBtn'>
+                        <button className='button' type='submit'>Entrar</button>  
+                    </div>
+                    <div className='forgot'>
+                    <Link className='forgotlink' to='/alterarSenha' target='_black'> Esqueceu a senha?</Link>
+                    </div>
+                </form>
             </div>
-
-                <div className='top'>
-                    <input type='email' className='inptEmailPassword' name='email' placeholder='Insira seu email' required value={email} onChange={(e) => {handleEmail(e)}}/>
-
-                </div>
-
-                <div className='mid'>
-                    <input type='password' className='inptEmailPassword' name='senha' placeholder='Insira sua senha' required value={password} onChange={(e) => {handlePassword(e)}}/>
-                </div>
-
-                <div className='connected'>
-                    <input type='checkbox' id='FiqueConectado' name='Fique Conectado' checked={FiqueConectado} onChange={(e) => setFiqueConectado(e.target.checked)} /> 
-                    <label htmlFor='FiqueConectado' className='labelFiqueConectado'>Fique Conectado</label>   
-                </div>
-                <div className='campBtn'>
-                    <button className='button' type='submit'>Entrar</button>  
-                </div>
-                <div className='forgot'>
-                <Link className='forgotlink' to='/alterarSenha' target='_black'> Esqueceu a senha?</Link>
-                </div>
-            </form>
-        </div>
-    </Container>
+        </Container>
     );
 }
 

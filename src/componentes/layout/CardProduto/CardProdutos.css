@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
 }
 .imagemDoCard{
     margin: 1rem 0 0 1rem;
@@ -44,4 +44,7 @@
 }
 .Btncard{
     margin-left: 7.5rem;
+}
+.Btncard:hover{
+    filter:brightness(87%);
 }

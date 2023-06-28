@@ -50,8 +50,8 @@ const CardsCategorias = ({img ,nome, idCategoria, idUser}) => {
             <div className="containerbtncartDespensa">
                     {isMenuVisible &&(
                         <ul className="ulDespensa">
-                            <li className="itemsMenu"><Link to={`/categoria/editar/${idCategoria}`} className="LinkEditDespensa"><img src={iconEditar} alt="Imagem Editar" width={20}/>Editar</Link></li>
-                            <li className="itemsMenu"><button className="btnDelDespensa" onClick={(e) => {handleDeleteCategoria(e, idCategoria, idUser)}}><img src={iconDeletar} alt="Imagem Excluir" width={20}/>Excluir</button></li>
+                            <li className="liMenuUser"><Link to={`/categoria/editar/${idCategoria}`} className="LinkEditDespensa"><img src={iconEditar} alt="Imagem Editar" width={20}/>Editar</Link></li>
+                            <li className="liMenuUser"><button className="btnDelDespensa" onClick={(e) => {handleDeleteCategoria(e, idCategoria, idUser)}}><img src={iconDeletar} alt="Imagem Excluir" width={20}/>Excluir</button></li>
                         </ul>
                     )}
             </div>

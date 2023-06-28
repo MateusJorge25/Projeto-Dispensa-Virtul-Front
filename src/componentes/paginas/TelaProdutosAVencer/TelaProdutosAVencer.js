@@ -30,12 +30,12 @@ const TelaProdutosAVencer = () =>{
         <div className="ContainerProdutosVencidos">
             <NavBar/>
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} alt="botão voltar" width={35}/></Link>
+                <Link className="LinkBtnVoltar" to={`/home/${id}`}><img src={btnVoltar} alt="botão voltar" width={35}/></Link>
                 <h1>Produtos Vencidos</h1>
             </div>
             <Container containerMod='TelaProdutos'>
             { 
-                Data.length == 0 || Data[0].hasOwnProperty('message') ? (
+                Data.length === 0 || Data[0].hasOwnProperty('message') ? (
                     <p className="NullProdutos">Nenhum Item Proximo de Vencer</p>    
                 ):(
                     Data.map((Element) => {

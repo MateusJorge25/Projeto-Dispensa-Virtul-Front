@@ -2,6 +2,13 @@
     width: 100%;
     background-color: rgba(70, 236, 156, 0.8);
 }
+.containerOpcoesUser{
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
 
 .navbar{
     width: 100%;
@@ -22,6 +29,7 @@
 }
 .container-icon > h1{
     margin-left: 2rem;
+    width: 100%;
 }
 .barraDePesquisa{
     width: 17rem;
@@ -47,18 +55,46 @@
     align-items: center;
 }
 .iconHamburguer{
-    padding: 0 2rem 0 0;
+    margin: 0 1.7rem 0 0;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:none;
-    background-color: transparent;
+    border-radius: 50%;
+    background-color: rgba(70, 236, 156, 0.8);
+}
+.iconHamburguer:hover{
+    filter:brightness(85%);
 }
 .ulNav{
-        padding: 10px;
-        position: absolute;
-        right: 5rem;
-        top: 4rem; 
-        list-style: none;
-        background-color:  rgba(70, 236, 156, 0.2);
-        width: 8rem;
-        height: 7rem;
-        padding: 10px;
+    list-style: none;
+    border-radius: 10px;
+    background-color: rgba(70, 236, 156, 1);
+    padding: 5px;
+    position: relative;
+    left: 88vw;
+    top:11vh;
+}
+.liMenuUser{
+    display: flex;
+    gap:3px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.liMenuUser:hover{
+    background-color:rgba(57, 196, 129, 1);
+    border-radius: 10px;
+}
+.optsUser{
+    text-decoration: none;
+    color:black;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }

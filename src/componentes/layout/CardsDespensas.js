@@ -67,7 +67,9 @@ const CardsDespesas = ({img ,nomeProduto,idDespensa, idUser, status}) => {
     const handleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
     };
+
     let imgstatus;
+    
     if(status === 1){
         imgstatus = iconStatusOn;
     }else{

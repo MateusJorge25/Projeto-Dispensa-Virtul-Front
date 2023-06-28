@@ -38,7 +38,7 @@ const TotalCategorias = () => {
         <div className="ContainerTotalProdutos">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Botão Voltar" width={35}/></Link>
+                <Link className="LinkBtnVoltar" to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Botão Voltar" width={35}/></Link>
                 <h1>Total as Categorias</h1>
             </div>
             <Container containerMod='TelaProdutos'>  

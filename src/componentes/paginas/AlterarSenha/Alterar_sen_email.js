@@ -40,7 +40,7 @@ function Alterar_sen() {
     }
     
     return (
-        <Container>
+        <Container containerMod="TelaLoginRegister">
         <div className="Conteiner">
         <form  className="FormEsqueceuSenha" onSubmit={handleSubmit}>
 

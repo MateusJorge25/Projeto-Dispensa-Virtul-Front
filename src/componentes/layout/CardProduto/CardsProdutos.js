@@ -24,7 +24,7 @@ switch (imgDespensa) {
     break;
     case "TodosOsProdutos": imagemDespensa = TodosOsProdutos;
     break;
-    default:
+    default: imagemDespensa = TodosOsProdutos;
         break;
 }
 let imagemProduto;
@@ -35,10 +35,18 @@ switch (img) {
     break;
     case "SucoDeLaranja": imagemProduto = CaideDeSucoDeLaranja;
     break;
-    default:
+    default: imagemProduto = TodosOsProdutos;
         break;
 }
 
+if(validade != null)
+    validade = validade.slice(0,10)
+else
+    validade = "Data de validade não informada";
+
+if (despensa == null)
+    despensa = "Despensa não informada";
+    
     return (
         <div className="ContainerCardProdutos">
             <div className="nomeImagemProduto">

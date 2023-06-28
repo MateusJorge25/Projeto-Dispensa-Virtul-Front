@@ -45,7 +45,7 @@ const TelaVerItem = () => {
             }
         };
         sendapi(id);
-    },[1]);
+    },[]);
 
     const deleteElement = async(e,id) =>{
         e.preventDefault();
@@ -109,6 +109,11 @@ const TelaVerItem = () => {
             break;
     }
 
+    if(Produto[0].dataDeValidade != null){
+        const dataf = Produto[0].dataDeValidade.slice(0,10);
+        Produto[0].dataDeValidade = dataf;
+    }
+
     return(
         <div className="ContainerTelaVerItem">
             <NavBar />
@@ -119,7 +124,7 @@ const TelaVerItem = () => {
             <Container containerMod = "TelaProdutos">
                 <div className="containerNomeImgCategoriaInfoProduto">
                     <div className="NomeEImagemProduto">
-                        <img src={imagemProduto} width={75}/>
+                        <img src={imagemProduto ?? TodosOsProdutos} width={75}/>
                         <h1>{Produto[0].NomeProduto}</h1>
                     </div>
                     <span className="spansVerProdutos">
@@ -135,25 +140,25 @@ const TelaVerItem = () => {
                     </span>
                     <span className="spansVerProdutos">
                         <img src={IconMedida} width={75}/>
-                        <h1>{Produto[0].UnidadeProduto}</h1>
+                        <h1>{Produto[0].UnidadeProduto ?? "Unidade não informada"}</h1>
                     </span>
                     <span className="spansVerProdutos">
                         <img src={Calendario} width={75}/>
-                        <h1>{Produto[0].dataDeValidade.slice(0,10)}</h1>
+                        <h1>{Produto[0].dataDeValidade ?? "Validade não informada"}</h1>
                     </span>
                 </div>
                     <div className="primeiraLinhaDoContainer">
                     <span className="spansVerProdutos">
                         <img src={IconLote} width={75}/>
-                        <h1>{Produto[0].LoteProduto}</h1>
+                        <h1>{Produto[0].LoteProduto ?? "Lote não informadao"}</h1>
                     </span>
                     <span className="spansVerProdutos">
                         <img src={Bebidas} width={75}/>
-                        <h1>{Produto[0].NomeCategoria}</h1>
+                        <h1>{Produto[0].NomeCategoria ?? "Categoria não informada"}</h1>
                     </span>
                     <span className="spansVerProdutos">
                         <img src={Geladeira} width={75}/>
-                        <h1>{Produto[0].NomeDespensa}</h1>
+                        <h1>{Produto[0].NomeDespensa ?? "Despensa não informada"}</h1>
                     </span>
                     </div>
                 </div>

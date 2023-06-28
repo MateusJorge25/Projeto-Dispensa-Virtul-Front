@@ -57,7 +57,7 @@ function RedefSenha() {
     
 
     return (
-        <Container>
+        <Container containerMod="TelaLoginRegister">
         <div className="Conteiner">
         <form className="FormRedfSenha" onSubmit={handleSubmit}>
 

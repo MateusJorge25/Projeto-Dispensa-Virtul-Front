@@ -16,3 +16,9 @@
     font-size: 1.7rem;
     padding: 0.5rem;
 }
+.BtnAdicionarProduto:hover{
+    filter:brightness(85%);
+}
+.LinkBtnVoltar:hover{
+    filter: brightness(85%);
+}

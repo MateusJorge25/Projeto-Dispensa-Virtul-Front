@@ -27,3 +27,9 @@
     right: 10rem;
     top: 35rem;
 }
+.BtnAdicionarProduto:hover{
+    filter:brightness(85%);
+}
+.LinkBtnVoltar:hover{
+    filter: brightness(85%);
+}

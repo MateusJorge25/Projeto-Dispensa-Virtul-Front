@@ -21,7 +21,12 @@
     right: 10rem;
     top: 35rem
 }
-
+.BtnAdicionarCategoria:hover{
+    filter:brightness(85%);
+}
+.LinkBtnVoltar:hover{
+    filter: brightness(85%);
+}
 
 
 

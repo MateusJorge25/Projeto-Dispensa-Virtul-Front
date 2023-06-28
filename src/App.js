@@ -13,7 +13,7 @@ import TotalProdutos from "./componentes/paginas/TotalProdutos/TotalProdutos";
 import EditarProdutos from "./componentes/paginas/EditarProdutos/EditarProduto";
 import ProdutoListCompras from "./componentes/paginas/AddProdutoLC/ProdutoListCompras";
 import ListaCompra from "./componentes/paginas/ListaCompra/ListaC";
-import Despesas from "./componentes/paginas/Despesas/Despesa";
+import Despensas from "./componentes/paginas/Despensas/Despensa";
 import RedefinirSenha from "./componentes/paginas/RedefSenha/RedefSenha";
 import TelaVerItem from "./componentes/paginas/TelaVerItem/TelaVerItem";
 import TotalCategorias from "./componentes/paginas/TelaCategoria/TotalCategorias";
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Login />} />
           <Route path='/alterar-senha/:tokenparam' element={<RedefinirSenha />}/>
-          <Route path='/despensas/:id' element={<Despesas/>}/>
+          <Route path='/despensas/:id' element={<Despensas/>}/>
           <Route path='/listadecompras/:id' element={<ListaCompra/>}/>
           <Route path='/adicionar/listCompras/:id' element={<ProdutoListCompras/>}/>
           <Route path='/produto/editar/:id'element={<EditarProdutos/>}/>

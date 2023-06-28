@@ -23,6 +23,7 @@ const TotalProdutos = () => {
             })
             const apijson = await date.json();
             setData(apijson);
+            console.log(apijson);
             return apijson;
         };
         sendApi(id);
@@ -32,7 +33,7 @@ const TotalProdutos = () => {
         <div className="ContainerTotalProdutos">
             <Navbar />
             <div className="BarravoltarProdutos">
-                <Link to={`/home/${id}`}><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
+                <Link className="LinkBtnVoltar" to={`/home/${id}`} ><img src={btnVoltar} alt="Imagem Voltar" width={35}/></Link>
                 <h1>Total de Produtos</h1>
             </div>
             <Container containerMod='TelaProdutos'>  
@@ -42,7 +43,7 @@ const TotalProdutos = () => {
                 ):(
                     Data.map((Element) => {
                     return <CardProdutos key={Element.IdProdutos} img={Element.ImgProduto} nomeProduto={Element.NomeProduto} quantidade={Element.quantidade}
-                    despensa={Element.NomeDespensa} validade={Element.dataDeValidade.slice(0,10)} imgDespensa={Element.ImgDespensa} idProduto={Element.IdProdutos}/>
+                    despensa={Element.NomeDespensa} validade={Element.dataDeValidade}  imgDespensa={Element.ImgDespensa} idProduto={Element.IdProdutos}/>
                 })
                 )
             }

@@ -27,22 +27,24 @@ const Navbar = () => {
             <nav className="navbar">
                 <div className='container-icon'>
                     <Link className='tagAForicon' to='/home'><img src={icon} alt='IconApp' width={60}></img></Link>                    
-                    <h1>Despensa</h1>
+                    <h1>Despensa Virtual</h1>
                     <div className='containerInputBarraDePesquisa'>
                         <input type="text" name='barraDePesquisa' className="barraDePesquisa" placeholder='Buscar Item'/> 
                         <span className='ContainerIconLupa'><img src={Lupa} alt='IconLupa'width={30}/></span>    
                     </div>   
                     <div className="Chamburguer">
                             <button onClick={(e)=>{handleMenu(e)}} className='iconHamburguer'><img src={hamburguer} width={30} alt="OpçõesUser"/></button>
+                    </div>
+                            <div className="containerOpcoesUser">
                                 {
                                     isMenuVisible &&(
                                         <ul className="ulNav">
-                                            <li><Link to={``} className="LinkEditDespensa"><img src={IconPerfil} alt="Minha conta" width={20}/>Minha Conta</Link></li>
-                                            <li><button className="btnAltStatus" onClick={handleSair}><img src={iconSaida} alt="Sair" width={20}/>Sair</button></li>
+                                            <li className="itemsMenu"><Link to={``} className="optsUser"><img src={IconPerfil} alt="Minha conta" width={20}/>Minha Conta</Link></li>
+                                            <li className="itemsMenu"><button className="optsUser" onClick={handleSair}><img src={iconSaida} alt="Sair" width={20}/>Sair</button></li>
                                         </ul>
                                     )
                                 }
-                    </div>      
+                            </div>    
                 </div>     
             </nav>
         </div>
